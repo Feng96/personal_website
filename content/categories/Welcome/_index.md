@@ -1,6 +1,6 @@
 ---
-title: Example Category
-description: A description of this category
+title: Welcom
+description: welcome post
 image:
 
 # Badge style
