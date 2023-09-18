@@ -68,10 +68,3 @@ _School of Chemical & Environmental Engineering_
   > Inventing a method for correcting PM 2.5 sensors based on linear regression algorithm. Based on accurate data received from PM 2.5 monitoring station near the proximity of the PM 2.5 sensor, the method uses linear regression algorithm to correct the PM 2.5 output value of the sensor, making the output value of the sensor consistent with the accurate value of PM 2.5 from the monitoring station, and therefore achieving the purpose of making the PM 2.5 sensor more accurate and reliable. Published at Australia International Patent, Publication Number:2018100221
 
 ---
-
-# Activity & Volunteer
-
-- **10/2018-05/2020** Participate in the International Student Union at OSU
-- **04-07/2017** Served as a voluntary librarian at the University
-- **09/2014-04/2018** Leader of Henan Townsmen Association of Liaoning University of Technology
-- **09/2014-11/2014** Served as Announcer in the Campus Radio Station of Liaoning University of Technology
