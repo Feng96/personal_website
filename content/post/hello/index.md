@@ -1,6 +1,6 @@
 ---
 title: Hello
-description: Welcome to my webisite
+description: Welcome to my personal website
 slug: Welcome
 date: 2023-09-16 07:35:00+0000
 image: cover.jpg
