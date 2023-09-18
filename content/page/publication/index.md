@@ -11,7 +11,7 @@ comments: false
 
 # Published
 
-- **Tongxi Hu, Elizabeth Myers Toman, Gang Chen, Gang Shao, Yuyu Zhou, Yang Li, Kaiguang Zhao, **Yinan Feng**,**
+- Tongxi Hu, Elizabeth Myers Toman, Gang Chen, Gang Shao, Yuyu Zhou, Yang Li, Kaiguang Zhao, **Yinan Feng**,
   _'Mapping fine-scale human disturbances in a working landscape with Landsat time series on Google Earth Engine'_  
   **ISPRS Journal of Photogrammetry and Remote Sensing**  
   [DOI: 10.1016/j.isprsjprs.2021.04.008](https://doi.org/10.1016/j.isprsjprs.2021.04.008)
