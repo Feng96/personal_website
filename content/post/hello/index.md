@@ -3,7 +3,7 @@ title: Hello
 description: Welcome to my personal website
 slug: Welcome
 date: 2023-09-16 07:35:00+0000
-image: cover.jpg
+image: snoppy.gif
 categories:
     - Welcome
 tags:
