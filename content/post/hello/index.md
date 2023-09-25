@@ -13,7 +13,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 Welcome to Yinan Feng’s Personal Website. Feel free to visit my cyber home!
 
-I’m a PhD student at UTK right now.
+I’m a PhD student at UT right now.
 
 My research interests:
 
