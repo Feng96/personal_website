@@ -10,7 +10,7 @@ comments: false
 ---
 ## Current Researches
 
-Currently, as a doctoral candidate at UT, my research landscape has evolved once more. Now, I am directing my focus on the United States building height dataset. The expansive realm of urban planning and architecture, coupled with environmental considerations, makes this a challenging yet invigorating area of research. I am eager to contribute valuable insights and analyses to this domain.
+Currently, as a PhD student at UT, my research landscape has evolved once more. Now, I am directing my focus on the United States building height dataset. The expansive realm of urban planning and architecture, coupled with environmental considerations, makes this a challenging yet invigorating area of research. I am eager to contribute valuable insights and analyses to this domain.
 
 ## Research at Institute of Geographical Sciences and Natural Resources (IGNRR), Chinese Academy of Sciences
 
