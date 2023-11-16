@@ -21,5 +21,3 @@ Feel free to contact me if you have any questions, suggestions, or feedback, ple
 
 ## Email
 [yfeng21@vols.utk.edu](mailto:yfeng21@vols.utk.edu)
-
-I check my email daily.
