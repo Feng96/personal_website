@@ -47,7 +47,7 @@ _School of Chemical & Environmental Engineering_
 
 - **Mapping fine-scale human disturbances in a working landscape with Landsat time series on Google Earth Engine**  
   _2020-2021_  
-  At Ohio State University  
+  At the Ohio State University  
   > We explored the possibility of a Bayesian estimator of abrupt changes, seasonality and trends (BEAST) to capture small-scale disturbances of human activity in a catchment in Ohio as our study area. We found the algorithm can successfully capture the patterns and timings of small-scale disturbances that not captured in the annual land cover maps from Cropland Data Layers—one of the most widely used classification based land dynamics products in the US. I'm responsible for the data pre-processing and visualization, part of the writing. Published at ISPRS Journal of Photogrammetry and Remote Sensing. DOI: https://doi.org/10.1016/j.isprsjprs.2021.04.008
 
 - **Case Study: how the temperature affects the evaporation process in Tokopah Valley, Nevada**  

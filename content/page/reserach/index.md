@@ -32,8 +32,8 @@ During my undergraduate studies, I developed a keen interest in environmental ch
 
 ![Correlation Plot](cor_plot.jpg)
 
-Fig. Spatial Correlation between Total Water Storage and Cumulative NDVI with p-value under 0.05
+Fig. Spatial Correlation between Total Water Storage and Cumulative NDVI, only keep piexls with p-value under 0.05
 
 ![Coverage Plot](coverage.jpg)
 
-Fig. Coverage of building height info from Micrsoft Building footprint dataset across the United States
+Fig. Map shown the percentage of buildings with height info from Micrsoft Building footprint dataset across the United States
