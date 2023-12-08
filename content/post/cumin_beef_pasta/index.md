@@ -7,7 +7,7 @@ image: noodle.jpg
 categories:
     - Pictures
 tags:
-    - Daily
+    - Recipes
     - Pictures
     - Cooking
 ---
