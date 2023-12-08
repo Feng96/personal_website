@@ -11,7 +11,7 @@ comments: false
 
 # Contact Me
 
-Feel free to contact me if you have any questions, suggestions, or feedback, please get in touch!
+Feel free to contact me if you have any questions, suggestions, or feedback!
 
 
 ![](mailbox.gif)
@@ -20,4 +20,5 @@ Feel free to contact me if you have any questions, suggestions, or feedback, ple
 +1-614-371-6433
 
 ## Email
+[feng.945@osu.edu](mailto:feng.945@osu.edu)
 [yfeng21@vols.utk.edu](mailto:yfeng21@vols.utk.edu)
