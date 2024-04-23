@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Yinan's Personal Website</title><link>https://yinanfeng.com/post/</link><description>Recent content in Posts on Yinan's Personal Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 08 Dec 2023 07:35:00 +0000</lastBuildDate><atom:link href="https://yinanfeng.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello</title><link>https://yinanfeng.com/p/welcome/</link><pubDate>Sat, 16 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/welcome/</guid><description>&lt;img src="https://yinanfeng.com/p/welcome/1220427.jpg" alt="Featured image of post Hello" />&lt;p>Welcome to Yinan Feng’s Personal Website. Feel free to visit my cyber home!&lt;/p>
+&lt;p>I’m a PhD student at UT right now.&lt;/p>
+&lt;p>My research interests:&lt;/p>
+&lt;ul>
+&lt;li>Remote Sensing&lt;/li>
+&lt;li>GIS&lt;/li>
+&lt;li>Water Resource&lt;/li>
+&lt;li>Agriculture&lt;/li>
+&lt;/ul></description></item><item><title>Geospatial Datasets Websites and Download Links</title><link>https://yinanfeng.com/p/dataset/</link><pubDate>Sun, 17 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/dataset/</guid><description>&lt;img src="https://yinanfeng.com/p/dataset/dataset.png" alt="Featured image of post Geospatial Datasets Websites and Download Links" />&lt;p>This is a post sharing some useful websites links and datasets links.&lt;/p>
+&lt;h3 id="datasets">Datasets&lt;/h3>
+&lt;p>GADM offers detailed maps of all countries, including their administrative subdivisions. You can find this resource here: &lt;a class="link" href="https://gadm.org/index.html" target="_blank" rel="noopener"
+>GADM - Geospatial Administrative Areas Database&lt;/a>.&lt;/p>
+&lt;p>TIGER provides lots of North American geo-spatial datasets. TIGER stands for the Topologically Integrated Geographic Encoding and Referencing system and represents the U.S. Census Bureau&amp;rsquo;s geographic spatial data. URL:&lt;a class="link" href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" target="_blank" rel="noopener"
+>TIGER Line Shapefiles&lt;/a> and &lt;a class="link" href="https://www.census.gov/data.html" target="_blank" rel="noopener"
+>TIGER Census Data&lt;/a>.&lt;/p>
+&lt;p>USGS Earth Explorer. Query and order satellite images, aerial photographs, and cartographic products through the U.S. Geological Survey. URL:&lt;a class="link" href="https://earthexplorer.usgs.gov/" target="_blank" rel="noopener"
+>USGS Earth Explorer&lt;/a>. (3DEP LiDAR)&lt;/p>
+&lt;p>The TNM Download Client is built on modern web technologies and features a simplified approach to downloading products from The National Map. URL:&lt;a class="link" href="https://apps.nationalmap.gov/downloader/" target="_blank" rel="noopener"
+>USGS TNM Download&lt;/a>. (SRTM Data)&lt;/p>
+&lt;p>Overture Maps provides free and open map data normalized to a common schema. They are currently focused on building the administrative boundaries, base (water, land, land use),buildings, places, transportation. URL:&lt;a class="link" href="https://overturemaps.org/download/" target="_blank" rel="noopener"
+>Overture Maps&lt;/a>. (US Building Dataset)&lt;/p>
+&lt;p>The GRACE twin satellites, launched 17 March 2002, are making detailed measurements of Earth&amp;rsquo;s gravity field changes and revolutionizing investigations about Earth&amp;rsquo;s water reservoirs over land, ice and oceans, as well as earthquakes and crustal deformations. URL:&lt;a class="link" href="https://grace.jpl.nasa.gov/mission/grace/" target="_blank" rel="noopener"
+>GRACE&lt;/a>. (Worldwide Water Storage Changes Dataset)&lt;/p></description></item><item><title>My Github homepage</title><link>https://yinanfeng.com/p/coding/</link><pubDate>Sun, 17 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/coding/</guid><description>&lt;img src="https://yinanfeng.com/p/coding/github_profile.png" alt="Featured image of post My Github homepage" />&lt;p>Below is the link to my Github homepage.&lt;/p>
+&lt;p>I mainly use R and Python.&lt;/p></description></item><item><title>rasterarea - A python package</title><link>https://yinanfeng.com/p/rasterarea-a-python-package/</link><pubDate>Thu, 21 Sep 2023 12:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/rasterarea-a-python-package/</guid><description>&lt;img src="https://yinanfeng.com/p/rasterarea-a-python-package/python_package.svg" alt="Featured image of post rasterarea - A python package" />&lt;p>This package provides a interactive map inherit from geemap and ipyleaflet. Visuallized geospatial data, pick a point and get the time series plot of the value in this point. Calculate the area of the pixel and more!&lt;/p>
+&lt;p>I&amp;rsquo;m working on adding more useful functions to this package!&lt;/p></description></item><item><title>For River（Johnny's version）</title><link>https://yinanfeng.com/p/paino/</link><pubDate>Sat, 16 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/paino/</guid><description>&lt;img src="https://yinanfeng.com/p/paino/river.jpg" alt="Featured image of post For River（Johnny's version）" />
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1vh4y1L7ir"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div></description></item><item><title>Cumin Beef Stir Fry Pasta</title><link>https://yinanfeng.com/p/noodle/</link><pubDate>Fri, 08 Dec 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/noodle/</guid><description>&lt;img src="https://yinanfeng.com/p/noodle/noodle.jpg" alt="Featured image of post Cumin Beef Stir Fry Pasta" />&lt;p>&lt;img src="https://yinanfeng.com/p/noodle/noodle.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/noodle/noodle_hub8f16ec2d9d3d413da4d7c07749ba83c_2162009_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/noodle/noodle_hub8f16ec2d9d3d413da4d7c07749ba83c_2162009_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 1"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>牛肉切片，用酱油，料酒，黑胡椒，淀粉，少许糖腌制20分钟&lt;/p>
+&lt;p>洋葱姜蒜切丝&lt;/p>
+&lt;p>热锅冷油，夹肉牛肉煸炒，半熟后加入洋葱姜蒜&lt;/p>
+&lt;p>加入蚝油老抽翻炒，再加入孜然粉辣椒粉&lt;/p>
+&lt;p>拌上意面&lt;/p></description></item><item><title>Cooking</title><link>https://yinanfeng.com/p/pcitures/</link><pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/p/pcitures/</guid><description>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2901.jpg" alt="Featured image of post Cooking" />&lt;p>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2520.JPG"
+width="3264"
+height="2448"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2520_hu1eea432df684c07fb647a1b2c58b8486_2036208_480x0_resize_q75_box.JPG 480w, https://yinanfeng.com/p/pcitures/IMG_2520_hu1eea432df684c07fb647a1b2c58b8486_2036208_1024x0_resize_q75_box.JPG 1024w"
+loading="lazy"
+alt="Image 1"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+> &lt;img src="https://yinanfeng.com/p/pcitures/IMG_2526.JPG"
+width="3264"
+height="2448"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2526_hu06ec2b1a1c203e0aa2d11f428bb959d4_1819125_480x0_resize_q75_box.JPG 480w, https://yinanfeng.com/p/pcitures/IMG_2526_hu06ec2b1a1c203e0aa2d11f428bb959d4_1819125_1024x0_resize_q75_box.JPG 1024w"
+loading="lazy"
+alt="Image 2"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2837.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2837_hu8b6f467fc3a79eb533c62b1db3cc300a_2389067_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/pcitures/IMG_2837_hu8b6f467fc3a79eb533c62b1db3cc300a_2389067_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 3"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+> &lt;img src="https://yinanfeng.com/p/pcitures/IMG_2845.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2845_hu9395e99f6c4a9e01734e99e08cbff49f_1958314_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/pcitures/IMG_2845_hu9395e99f6c4a9e01734e99e08cbff49f_1958314_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 4"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2901.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2901_hu98300f917aa0bd06fd6e3523a5939e91_2629787_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/pcitures/IMG_2901_hu98300f917aa0bd06fd6e3523a5939e91_2629787_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 5"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+> &lt;img src="https://yinanfeng.com/p/pcitures/IMG_6930.JPG"
+width="1080"
+height="1920"
+srcset="https://yinanfeng.com/p/pcitures/IMG_6930_hu0fd0f1e723b99ec88f2456dd669a483f_710436_480x0_resize_q75_box.JPG 480w, https://yinanfeng.com/p/pcitures/IMG_6930_hu0fd0f1e723b99ec88f2456dd669a483f_710436_1024x0_resize_q75_box.JPG 1024w"
+loading="lazy"
+alt="Image 6"
+class="gallery-image"
+data-flex-grow="56"
+data-flex-basis="135px"
+>&lt;/p></description></item></channel></rss>

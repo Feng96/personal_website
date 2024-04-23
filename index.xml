@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yinan's Personal Website</title><link>https://yinanfeng.com/</link><description>Recent content on Yinan's Personal Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 08 Dec 2023 07:35:00 +0000</lastBuildDate><atom:link href="https://yinanfeng.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello</title><link>https://yinanfeng.com/p/welcome/</link><pubDate>Sat, 16 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/welcome/</guid><description>&lt;img src="https://yinanfeng.com/p/welcome/1220427.jpg" alt="Featured image of post Hello" />&lt;p>Welcome to Yinan Feng’s Personal Website. Feel free to visit my cyber home!&lt;/p>
+&lt;p>I’m a PhD student at UT right now.&lt;/p>
+&lt;p>My research interests:&lt;/p>
+&lt;ul>
+&lt;li>Remote Sensing&lt;/li>
+&lt;li>GIS&lt;/li>
+&lt;li>Water Resource&lt;/li>
+&lt;li>Agriculture&lt;/li>
+&lt;/ul></description></item><item><title>Geospatial Datasets Websites and Download Links</title><link>https://yinanfeng.com/p/dataset/</link><pubDate>Sun, 17 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/dataset/</guid><description>&lt;img src="https://yinanfeng.com/p/dataset/dataset.png" alt="Featured image of post Geospatial Datasets Websites and Download Links" />&lt;p>This is a post sharing some useful websites links and datasets links.&lt;/p>
+&lt;h3 id="datasets">Datasets&lt;/h3>
+&lt;p>GADM offers detailed maps of all countries, including their administrative subdivisions. You can find this resource here: &lt;a class="link" href="https://gadm.org/index.html" target="_blank" rel="noopener"
+>GADM - Geospatial Administrative Areas Database&lt;/a>.&lt;/p>
+&lt;p>TIGER provides lots of North American geo-spatial datasets. TIGER stands for the Topologically Integrated Geographic Encoding and Referencing system and represents the U.S. Census Bureau&amp;rsquo;s geographic spatial data. URL:&lt;a class="link" href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" target="_blank" rel="noopener"
+>TIGER Line Shapefiles&lt;/a> and &lt;a class="link" href="https://www.census.gov/data.html" target="_blank" rel="noopener"
+>TIGER Census Data&lt;/a>.&lt;/p>
+&lt;p>USGS Earth Explorer. Query and order satellite images, aerial photographs, and cartographic products through the U.S. Geological Survey. URL:&lt;a class="link" href="https://earthexplorer.usgs.gov/" target="_blank" rel="noopener"
+>USGS Earth Explorer&lt;/a>. (3DEP LiDAR)&lt;/p>
+&lt;p>The TNM Download Client is built on modern web technologies and features a simplified approach to downloading products from The National Map. URL:&lt;a class="link" href="https://apps.nationalmap.gov/downloader/" target="_blank" rel="noopener"
+>USGS TNM Download&lt;/a>. (SRTM Data)&lt;/p>
+&lt;p>Overture Maps provides free and open map data normalized to a common schema. They are currently focused on building the administrative boundaries, base (water, land, land use),buildings, places, transportation. URL:&lt;a class="link" href="https://overturemaps.org/download/" target="_blank" rel="noopener"
+>Overture Maps&lt;/a>. (US Building Dataset)&lt;/p>
+&lt;p>The GRACE twin satellites, launched 17 March 2002, are making detailed measurements of Earth&amp;rsquo;s gravity field changes and revolutionizing investigations about Earth&amp;rsquo;s water reservoirs over land, ice and oceans, as well as earthquakes and crustal deformations. URL:&lt;a class="link" href="https://grace.jpl.nasa.gov/mission/grace/" target="_blank" rel="noopener"
+>GRACE&lt;/a>. (Worldwide Water Storage Changes Dataset)&lt;/p></description></item><item><title>My Github homepage</title><link>https://yinanfeng.com/p/coding/</link><pubDate>Sun, 17 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/coding/</guid><description>&lt;img src="https://yinanfeng.com/p/coding/github_profile.png" alt="Featured image of post My Github homepage" />&lt;p>Below is the link to my Github homepage.&lt;/p>
+&lt;p>I mainly use R and Python.&lt;/p></description></item><item><title>rasterarea - A python package</title><link>https://yinanfeng.com/p/rasterarea-a-python-package/</link><pubDate>Thu, 21 Sep 2023 12:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/rasterarea-a-python-package/</guid><description>&lt;img src="https://yinanfeng.com/p/rasterarea-a-python-package/python_package.svg" alt="Featured image of post rasterarea - A python package" />&lt;p>This package provides a interactive map inherit from geemap and ipyleaflet. Visuallized geospatial data, pick a point and get the time series plot of the value in this point. Calculate the area of the pixel and more!&lt;/p>
+&lt;p>I&amp;rsquo;m working on adding more useful functions to this package!&lt;/p></description></item><item><title>For River（Johnny's version）</title><link>https://yinanfeng.com/p/paino/</link><pubDate>Sat, 16 Sep 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/paino/</guid><description>&lt;img src="https://yinanfeng.com/p/paino/river.jpg" alt="Featured image of post For River（Johnny's version）" />
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1vh4y1L7ir"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div></description></item><item><title>Cumin Beef Stir Fry Pasta</title><link>https://yinanfeng.com/p/noodle/</link><pubDate>Fri, 08 Dec 2023 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/noodle/</guid><description>&lt;img src="https://yinanfeng.com/p/noodle/noodle.jpg" alt="Featured image of post Cumin Beef Stir Fry Pasta" />&lt;p>&lt;img src="https://yinanfeng.com/p/noodle/noodle.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/noodle/noodle_hub8f16ec2d9d3d413da4d7c07749ba83c_2162009_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/noodle/noodle_hub8f16ec2d9d3d413da4d7c07749ba83c_2162009_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 1"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>牛肉切片，用酱油，料酒，黑胡椒，淀粉，少许糖腌制20分钟&lt;/p>
+&lt;p>洋葱姜蒜切丝&lt;/p>
+&lt;p>热锅冷油，夹肉牛肉煸炒，半熟后加入洋葱姜蒜&lt;/p>
+&lt;p>加入蚝油老抽翻炒，再加入孜然粉辣椒粉&lt;/p>
+&lt;p>拌上意面&lt;/p></description></item><item><title>Cooking</title><link>https://yinanfeng.com/p/pcitures/</link><pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/p/pcitures/</guid><description>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2901.jpg" alt="Featured image of post Cooking" />&lt;p>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2520.JPG"
+width="3264"
+height="2448"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2520_hu1eea432df684c07fb647a1b2c58b8486_2036208_480x0_resize_q75_box.JPG 480w, https://yinanfeng.com/p/pcitures/IMG_2520_hu1eea432df684c07fb647a1b2c58b8486_2036208_1024x0_resize_q75_box.JPG 1024w"
+loading="lazy"
+alt="Image 1"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+> &lt;img src="https://yinanfeng.com/p/pcitures/IMG_2526.JPG"
+width="3264"
+height="2448"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2526_hu06ec2b1a1c203e0aa2d11f428bb959d4_1819125_480x0_resize_q75_box.JPG 480w, https://yinanfeng.com/p/pcitures/IMG_2526_hu06ec2b1a1c203e0aa2d11f428bb959d4_1819125_1024x0_resize_q75_box.JPG 1024w"
+loading="lazy"
+alt="Image 2"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2837.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2837_hu8b6f467fc3a79eb533c62b1db3cc300a_2389067_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/pcitures/IMG_2837_hu8b6f467fc3a79eb533c62b1db3cc300a_2389067_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 3"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+> &lt;img src="https://yinanfeng.com/p/pcitures/IMG_2845.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2845_hu9395e99f6c4a9e01734e99e08cbff49f_1958314_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/pcitures/IMG_2845_hu9395e99f6c4a9e01734e99e08cbff49f_1958314_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 4"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/pcitures/IMG_2901.jpg"
+width="3024"
+height="4032"
+srcset="https://yinanfeng.com/p/pcitures/IMG_2901_hu98300f917aa0bd06fd6e3523a5939e91_2629787_480x0_resize_q75_box.jpg 480w, https://yinanfeng.com/p/pcitures/IMG_2901_hu98300f917aa0bd06fd6e3523a5939e91_2629787_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Image 5"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+> &lt;img src="https://yinanfeng.com/p/pcitures/IMG_6930.JPG"
+width="1080"
+height="1920"
+srcset="https://yinanfeng.com/p/pcitures/IMG_6930_hu0fd0f1e723b99ec88f2456dd669a483f_710436_480x0_resize_q75_box.JPG 480w, https://yinanfeng.com/p/pcitures/IMG_6930_hu0fd0f1e723b99ec88f2456dd669a483f_710436_1024x0_resize_q75_box.JPG 1024w"
+loading="lazy"
+alt="Image 6"
+class="gallery-image"
+data-flex-grow="56"
+data-flex-basis="135px"
+>&lt;/p></description></item><item><title>Posts</title><link>https://yinanfeng.com/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/archives/</guid><description/></item><item><title>About me</title><link>https://yinanfeng.com/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/about-me/</guid><description>&lt;p>Greetings! My name is Yinan Feng, and my roots trace back to the vibrant city of Nanyang, situated in the central part of China. Here, as a child, the world unfurled before me in its myriad shades. As a child, I enjoyed watching BBC Nature documentaries on TV, with ‘Planet Earth’ being my favorite. The more I delved into the natural world, the more I realized that it wasn&amp;rsquo;t merely about me discovering nature&amp;rsquo;s splendor but rather nature unveiling its magnificence to me. This gradual journey of understanding, discovering, and falling in love with the nature wasn&amp;rsquo;t an overnight epiphany but a transformative process.&lt;/p>
+&lt;p>In 2014, my academic pursuit took a formidable shape when I entered the School of Chemical and Environmental Engineering at Liaoning University of Technology (LUT). My passion for the field then led me across the seas to Ohio State University (OSU), where I specialized in environmental remote sensing under Dr. Zhao&amp;rsquo;s guidance.&lt;/p>
+&lt;p>One of the defining moments in my academic trajectory was my internship at the Institute of Geographical Sciences and Environmental Resources, Chinese Academy of Sciences (IGNRR, CAS). It wasn&amp;rsquo;t just another feather in my cap, but my first solo flight in the world of research. From conceptualizing a project to methodically crafting a manuscript, this experience shaped my understanding of research intricacies. It taught me the art of capturing research highlights and crafting a compelling narrative. My quest for knowledge is insatiable. I am currently a doctoral candidate at the University of Tennessee, dedicating my research efforts under the mentorship of Dr. Wu.&lt;/p>
+&lt;p>I&amp;rsquo;ve been fortunate to be nurtured by diverse cultures, first in China and now in the US. My travels, often during school holidays, have taken me to various corners of China, deepening my appreciation for its rich tapestry of cultures and further fueling my love for nature.&lt;/p>
+&lt;p>Outside of academia, I am a beginner in piano, skiing, street dance, and cooking. I love Big Band Jazz music.&lt;/p>
+&lt;p>My favorite singers: Lana Del Rey, Sam Cooke and Paloma Faith.&lt;/p>
+&lt;p>And bands: Queen, Coldplay&lt;/p></description></item><item><title>Contact</title><link>https://yinanfeng.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/contact/</guid><description>&lt;h1 id="contact-me">Contact Me&lt;/h1>
+&lt;p>Feel free to contact me if you have any questions, suggestions, or feedback!&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/mailbox.gif"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="email">Email&lt;/h2>
+&lt;p>&lt;a class="link" href="mailto:feng.945@osu.edu" >feng.945@osu.edu&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="mailto:yfeng21@vols.utk.edu" >yfeng21@vols.utk.edu&lt;/a>&lt;/p></description></item><item><title>CV</title><link>https://yinanfeng.com/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/cv/</guid><description>&lt;h1 id="education">Education&lt;/h1>
+&lt;h3 id="phd">Ph.D&lt;/h3>
+&lt;p>&lt;strong>University of Tennessee, Knoxville&lt;/strong>&lt;br>
+&lt;em>School of Art and Science&lt;/em>&lt;br>
+01/2023 - NOW&lt;br>
+&lt;strong>Major:&lt;/strong> Geography&lt;br>
+&lt;strong>Advisor:&lt;/strong> Dr. Qiusheng Wu&lt;/p>
+&lt;hr>
+&lt;h3 id="master-of-science">Master of Science&lt;/h3>
+&lt;p>&lt;strong>Ohio State University&lt;/strong>&lt;br>
+&lt;em>School of Environmental and Natural Resources&lt;/em>&lt;br>
+09/2018 - 12/2020&lt;br>
+&lt;strong>Major:&lt;/strong> Environmental Science&lt;br>
+&lt;strong>Committee Members:&lt;/strong> Dr. Kaiguang Zhao (Advisor), Dr. Gil Bohrer, Dr. Desheng Liu&lt;/p>
+&lt;hr>
+&lt;h3 id="bachelor-of-science">Bachelor of Science&lt;/h3>
+&lt;p>&lt;strong>Liaoning University of Technology&lt;/strong>&lt;br>
+&lt;em>School of Chemical &amp;amp; Environmental Engineering&lt;/em>&lt;br>
+09/2014 - 06/2018&lt;br>
+&lt;strong>Major:&lt;/strong> Environmental Science&lt;/p>
+&lt;hr>
+&lt;h1 id="research--intern">Research &amp;amp; Intern&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Intern at Key Laboratory of Regional Sustainable Development&lt;/strong>&lt;br>
+&lt;em>Jan 2021 - Dec 2022&lt;/em>&lt;br>
+At the Institute of Geoscience and Natural Resource Research, Chinese Academy of Sciences&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>By using GRACE satellite data and MODIS satellite data, we observe the contradiction between agricultural development and water resources under the new patterns of China’s grain production. Satellite data observe that the center of grains production in China is shifting to the northwest, while the water resource is changing in the opposite direction. The contrast between the two may cause an accelerated depletion of agricultural production potential in the already water-scarce north. The project is funded by the National Natural Science Foundation of China: 4217011493. I completed the data download, pre-processing, analysis, plotting, visualization and article writing for the project. The Manuscript is submitted to Remote Sensing and is still under peer review.&lt;/li>
+&lt;li>Using MODIS fire product to map the temporal and spatial distribution of crop residue burning events in Northeast China (NEC). Providing helpful information at the county level for decision maker to evaluate the effectiveness of staw burning bans policy in NEC.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Mapping fine-scale human disturbances in a working landscape with Landsat time series on Google Earth Engine&lt;/strong>&lt;br>
+&lt;em>2020-2021&lt;/em>&lt;br>
+At the Ohio State University&lt;/p>
+&lt;blockquote>
+&lt;p>We explored the possibility of a Bayesian estimator of abrupt changes, seasonality and trends (BEAST) to capture small-scale disturbances of human activity in a catchment in Ohio as our study area. We found the algorithm can successfully capture the patterns and timings of small-scale disturbances that not captured in the annual land cover maps from Cropland Data Layers—one of the most widely used classification based land dynamics products in the US. I&amp;rsquo;m responsible for the data pre-processing and visualization, part of the writing. Published at ISPRS Journal of Photogrammetry and Remote Sensing. DOI: &lt;a class="link" href="https://doi.org/10.1016/j.isprsjprs.2021.04.008" target="_blank" rel="noopener"
+>https://doi.org/10.1016/j.isprsjprs.2021.04.008&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Case Study: how the temperature affects the evaporation process in Tokopah Valley, Nevada&lt;/strong>&lt;br>
+&lt;em>April 2019&lt;/em>&lt;br>
+The final project of GEOG 5226 Land Surface Hydrology at OSU&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Tokopah valley is famous for the Tokopah Waterfall. According to some researches, the flow of this waterfall is highly depended on the rainfall and snowfall. I applied &amp;lsquo;Modular Distributed Watershed Educational Toolbox&amp;rsquo; (MOD-WET) to build a watershed model and simulate the surface hydrology conditions here
+ - According to the model, the monthly average discharge reaches its highest value in May. the maximum values of monthly average baseflow appeared from April to May. For visitors at Tokopah Valley, maybe spring is the best season for enjoying a trip there. Visitors may find a gushing waterfall in Tokopah Valley.&lt;/li>
+&lt;li>According to the report of UCLA, By the end of this century under our current greenhouse gas pathway, temperatures across the Sierra rise by as much as 10 degrees Fahrenheit ( Climate Change in the Sierra Nevada &lt;a class="link" href="https://www.ioes.ucla.edu/project/climate-change-sierra-nevada/%29" target="_blank" rel="noopener"
+>https://www.ioes.ucla.edu/project/climate-change-sierra-nevada/)&lt;/a>. According to my simulation, the discharge at the outlet will decrease to 0.3967 from 0.5158 m&lt;sup>3&lt;/sup>/h. However, the maximum value is 16.4273 which is higher than before.  The base flow also declined to 1.8480 × 10&lt;sup>-7&lt;/sup> m/h.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>The use of high-resolution remote sensing for plague surveillance in Kazakhstan&lt;/strong>&lt;br>
+&lt;em>April 2019&lt;/em>&lt;br>
+The final project of 5225 Introduction to Remote Sensing at OSU&lt;/p>
+&lt;blockquote>
+&lt;p>Bubonic plague, caused by Yersinia pestis, is usually spread by fleas. In Kazakhstan, Great Gerbil is a common carrier of fleas. Great Gerbil establishes a star-like pattern of burrow systems. Such systems strongly reflect the sunlight and are visible on satellite images. Each bright disc represents a burrow system 10-40 m in diameter. We used high-resolution satellite images to estimate the range and number of Great Gerbil to provide more information to surveil the spread of the plague in Kazakhstan.&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Study of a correction method based on linear regression algorithm for PM2.5 sensors&lt;/strong>&lt;br>
+&lt;em>Jan 2018&lt;/em>&lt;br>
+At the Institute of Automation, Chinese Academy of Science&lt;/p>
+&lt;blockquote>
+&lt;p>Inventing a method for correcting PM 2.5 sensors based on linear regression algorithm. Based on accurate data received from PM 2.5 monitoring station near the proximity of the PM 2.5 sensor, the method uses linear regression algorithm to correct the PM 2.5 output value of the sensor, making the output value of the sensor consistent with the accurate value of PM 2.5 from the monitoring station, and therefore achieving the purpose of making the PM 2.5 sensor more accurate and reliable. Published at Australia International Patent, Publication Number:2018100221&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;hr></description></item><item><title>Publications</title><link>https://yinanfeng.com/publications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/publications/</guid><description>&lt;h1 id="journals">Journals&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>Tongxi Hu, Elizabeth Myers Toman, Gang Chen, Gang Shao, Yuyu Zhou, Yang Li, Kaiguang Zhao, &lt;strong>Yinan Feng&lt;/strong>,
+&lt;em>&amp;lsquo;Mapping fine-scale human disturbances in a working landscape with Landsat time series on Google Earth Engine&amp;rsquo;&lt;/em>&lt;br>
+&lt;strong>ISPRS Journal of Photogrammetry and Remote Sensing&lt;/strong>&lt;br>
+&lt;a class="link" href="https://doi.org/10.1016/j.isprsjprs.2021.04.008" target="_blank" rel="noopener"
+>DOI: 10.1016/j.isprsjprs.2021.04.008&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Yinan Feng&lt;/strong> and Jieyong Wang,
+&lt;em>&amp;lsquo;Detecting the Spatial Mismatch of Water Resources and Grain Planting Pattern Changes in China Based on Satellite Data&amp;rsquo;&lt;/em>&lt;br>
+&lt;strong>Frontiers at Environmental Science&lt;/strong>&lt;br>
+&lt;a class="link" href="https://www.frontiersin.org/articles/10.3389/fenvs.2022.904779/full?&amp;amp;utm_source=Email_to_authors_&amp;amp;utm_medium=Email&amp;amp;utm_content=T1_11.5e1_author&amp;amp;utm_campaign=Email_publication&amp;amp;field=&amp;amp;journalName=Frontiers_in_Environmental_Science&amp;amp;id=904779" target="_blank" rel="noopener"
+>Online Publication DOI: 10.3389/fenvs.2022.904779&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="apps">Apps&lt;/h1>
+&lt;p>&lt;strong>Wearing a Mask and keeping social distance!&lt;/strong>&lt;br>
+I used R Shiny to design an app that downloads data from the Johns Hopkins CSSE group (&lt;a class="link" href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener"
+>source&lt;/a>), showing the last 7 days of new COVID-19 cases by state, as well as executive orders from the local government.&lt;/p>
+&lt;p>&lt;a class="link" href="https://feng945.shinyapps.io/stat5730/" target="_blank" rel="noopener"
+>link to the app&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h1 id="patents">Patents&lt;/h1>
+&lt;p>&lt;strong>A correction method based on linear regression algorithm for PM2.5 sensors&lt;/strong>&lt;br>
+Published at Australia International Patent&lt;br>
+Publication Number: 2018100221&lt;/p></description></item><item><title>Research</title><link>https://yinanfeng.com/research/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/research/</guid><description>&lt;h2 id="current-researches">Current Researches&lt;/h2>
+&lt;p>Currently, as a PhD student at UT, my research landscape has evolved once more. Now, I am directing my focus on the United States building height dataset. The expansive realm of urban planning and architecture, coupled with environmental considerations, makes this a challenging yet invigorating area of research. I am eager to contribute valuable insights and analyses to this domain.&lt;/p>
+&lt;h2 id="research-at-institute-of-geographical-sciences-and-natural-resources-ignrr-chinese-academy-of-sciences">Research at Institute of Geographical Sciences and Natural Resources (IGNRR), Chinese Academy of Sciences&lt;/h2>
+&lt;p>Following my time at OSU, I embarked on a new chapter as an intern at the Institute of Geographical Sciences and Natural Resources, Chinese Academy of Sciences. Here, my research interest pivoted towards agricultural remote sensing.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>My inaugural project at IGNRR, funded by the Natural Science Foundation of China, revolved around the new grain production patterns in China. Utilizing GRACE gravity satellite data and MODIS NDVI products, we aimed to observe the spatial distributions of changes in agricultural development juxtaposed with water resources. This was pivotal in highlighting the contradictions arising due to their differing spatial distributions.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Following this, I embarked on a new research endeavor. This time, our objective was to employ the MODIS Active Fire product to determine the spatial and time-series change of crop residual burning events in Northeast China spanning the period from 2015 to 2020. With the Chinese government initiating a straw returning policy in this region in 2017, our intent was to leverage satellite data to discern the variations pre and post the policy&amp;rsquo;s inception. This would, in turn, enable a holistic assessment of the policy&amp;rsquo;s temporal and spatial ramifications.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="graduate-studies-at-osu">Graduate Studies at OSU&lt;/h2>
+&lt;p>Upon my enrollment at Ohio State University (OSU), there was a significant shift in my research interests towards Environmental Remote Sensing. Under the astute guidance of Dr. Zhao, I was introduced to the world of satellite data and its profound implications for environmental research.&lt;/p>
+&lt;p>One of the pivotal projects during my time at OSU involved the use of GRACE satellite data. With this, we aimed to detect and analyze changes in water resources within Australia. Further deepening our research, we probed into the correlation between these water resource fluctuations and the NDVI (Normalized Difference Vegetation Index) changes. This investigation provided valuable insights into the interconnectedness of natural water reservoirs and vegetation dynamics in Australia.&lt;/p>
+&lt;h2 id="undergraduate-research">Undergraduate Research&lt;/h2>
+&lt;p>During my undergraduate studies, I developed a keen interest in environmental chemistry. This laid the foundation for my passion for understanding the environment through scientific methodologies.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/cor_plot.jpg"
+loading="lazy"
+alt="Correlation Plot"
+>&lt;/p>
+&lt;p>Fig. Spatial Correlation between Total Water Storage and Cumulative NDVI, only keep piexls with p-value under 0.05&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/coverage.jpg"
+loading="lazy"
+alt="Coverage Plot"
+>&lt;/p>
+&lt;p>Fig. Map shown the percentage of buildings with height info from Micrsoft Building footprint dataset across the United States&lt;/p></description></item></channel></rss>
