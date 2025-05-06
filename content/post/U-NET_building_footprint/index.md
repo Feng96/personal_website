@@ -3,7 +3,7 @@ title: "Building Footprint Extraction with U-Net"
 description: "Automatic extraction of building footprints from NAIP imagery using a ResNet-50 U-Net and OpenStreetMap labels"
 slug: "building-footprint-extraction"
 date: 2025-05-02 07:35:00+0000
-image: "loss_plot.png"
+image: "building_footprint.png"
 categories:
   - "Deep Learning"
   - "Remote Sensing"
@@ -40,15 +40,17 @@ This post demonstrates how we trained a U-Net (with a ResNet-50 encoder pretrain
 
 ## Sample Predictions
 
-Each panel below shows **Input / Ground Truth / Prediction** for four test patches:
+### Sample 1
+![Sample 1](ep20_1.png)
 
-| Sample 1        | Sample 2        |
-|:---------------:|:---------------:|
-| ![](ep20_1.png) | ![](ep20_2.png) |
+### Sample 2
+![Sample 2](ep20_2.png)
 
-| Sample 3        | Sample 4        |
-|:---------------:|:---------------:|
-| ![](ep20_3.png) | ![](ep20_4.png) |
+### Sample 3
+![Sample 3](ep20_3.png)
+
+### Sample 4
+![Sample 4](ep20_4.png)
 
 ## Vectorized Footprints
 
