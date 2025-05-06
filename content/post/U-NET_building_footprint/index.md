@@ -13,7 +13,7 @@ tags:
   - "NAIP"
   - "OpenStreetMap"
   - "Segmentation"
-weight: 0
+weight: 4
 ---
 
 This post demonstrates how we trained a U-Net (with a ResNet-50 encoder pretrained on ImageNet) to extract building footprints from high-resolution NAIP imagery using OpenStreetMap polygons as labels.
@@ -42,9 +42,13 @@ This post demonstrates how we trained a U-Net (with a ResNet-50 encoder pretrain
 
 Each panel below shows **Input / Ground Truth / Prediction** for four test patches:
 
-| Sample 1        | Sample 2        | Sample 3        | Sample 4        |
-|:---------------:|:---------------:|:---------------:|:---------------:|
-| ![](ep20_1.png) | ![](ep20_2.png) | ![](ep20_3.png) | ![](ep20_4.png) |
+| Sample 1        | Sample 2        |
+|:---------------:|:---------------:|
+| ![](ep20_1.png) | ![](ep20_2.png) |
+
+| Sample 3        | Sample 4        |
+|:---------------:|:---------------:|
+| ![](ep20_3.png) | ![](ep20_4.png) |
 
 ## Vectorized Footprints
 
