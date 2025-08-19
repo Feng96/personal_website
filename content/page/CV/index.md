@@ -39,6 +39,13 @@ _School of Chemical & Environmental Engineering_
 
 # Research & Intern
 
+- **Intern at Oak Ridge National Laboratory (ORNL)**  
+  _May 2025 – Aug 2025_  
+  At the Geographic Information Science and Technology Group (GIST), Oak Ridge National Laboratory  
+  > - Integrated and standardized multiple building footprint datasets into the AutoBEM (Automatic Building Energy Modeling) input format. Analyzed how variations in building footprints affect energy simulation results at both the city and individual building levels. Found that electricity consumption correlates strongly with footprint area, while natural gas consumption is more sensitive to footprint complexity and building type.  
+  > - Conducted statistical analysis and visualization of energy simulation outputs, producing insights on the downstream impacts of remote sensing–derived building data. This work contributes directly to my PhD dissertation and will result in a manuscript prepared for journal submission.  
+  > - Collaborated with interdisciplinary researchers and project group members, enhancing skills in geospatial analysis, high-performance computing, and applied energy modeling.  
+  
 - **Intern at Key Laboratory of Regional Sustainable Development**  
   _Jan 2021 - Dec 2022_  
   At the Institute of Geoscience and Natural Resource Research, Chinese Academy of Sciences  
