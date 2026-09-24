@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GlobalBuildingAtlas on Yinan's Personal Website</title><link>https://yinanfeng.com/tags/globalbuildingatlas/</link><description>Recent content in GlobalBuildingAtlas on Yinan's Personal Website</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 02 May 2025 07:35:00 +0000</lastBuildDate><atom:link href="https://yinanfeng.com/tags/globalbuildingatlas/index.xml" rel="self" type="application/rss+xml"/><item><title>Building Footprint Extraction: From U-Net to RGB–Height Fusion</title><link>https://yinanfeng.com/p/building-footprint-extraction/</link><pubDate>Fri, 02 May 2025 07:35:00 +0000</pubDate><guid>https://yinanfeng.com/p/building-footprint-extraction/</guid><description>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/building_footprint.png" alt="Featured image of post Building Footprint Extraction: From U-Net to RGB–Height Fusion" />&lt;p>&lt;em>Updated September 24, 2026. This article expands the original “Building Footprint Extraction with U-Net” post. The initial experiment and its figures are preserved below; the subsequent sections describe the project&amp;rsquo;s development into the US Building Footprint (USBF) workflow.&lt;/em>&lt;/p>
+&lt;p>This project began with a straightforward question: can a U-Net learn building footprints from aerial imagery? It has since grown into a broader investigation of how to combine imagery, elevation, and existing building inventories while preserving useful geometric detail.&lt;/p>
+&lt;p>The current workflow uses RGB–height segmentation models to propose selective changes to GlobalBuildingAtlas (GBA) polygons. It keeps the original geometry, building identity, and processing history alongside each result. The work now includes multi-region evaluation, 50,000 training patches, experiments on shape and missing elevation, and a production pipeline processing millions of buildings.&lt;/p>
+&lt;p>The results also changed the research direction. Visually plausible modifications do not consistently improve agreement with reference footprints. Preserving a strong baseline, measuring failures, and making every accepted change reversible have become central parts of the project.&lt;/p>
+&lt;h2 id="where-the-project-stands">Where the project stands&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Component&lt;/th>
+&lt;th>Verified progress as of September 24, 2026&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Model development&lt;/td>
+&lt;td>RGB–height B0 and shape-aware B1; subsequent learning-rate, elevation, architecture, and sampling comparisons&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Latest experimental data&lt;/td>
+&lt;td>50,000 training patches and 818 fixed development-validation patches&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Frozen scientific evaluation&lt;/td>
+&lt;td>Four regions, 389 evaluation windows, and 48,772 processed GBA objects&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Six-state input preparation&lt;/td>
+&lt;td>997,522 ready windows across Alabama, Arizona, Arkansas, California, Colorado, and Connecticut&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Frozen B0/B1 probability generation&lt;/td>
+&lt;td>Completed for those 997,522 ready windows&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Production vector output&lt;/td>
+&lt;td>7,462,544 buildings recorded as committed; 176,795 modified, at the September 24, 16:19 EDT status snapshot&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Public dataset release&lt;/td>
+&lt;td>Pending; the national product is not complete&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>These counts describe different stages. An input window is not a training example by default, a probability raster is not a final vector product, and a modified building is not automatically an improved building. Production counts describe internal committed outputs, not a publicly deposited dataset.&lt;/p>
+&lt;h2 id="1-the-original-u-net-experiment">1. The original U-Net experiment&lt;/h2>
+&lt;p>The May 2025 prototype used 1 m NAIP RGB imagery over Orange County, California, with rasterized OpenStreetMap building polygons as labels. A U-Net with an ImageNet-pretrained ResNet-50 encoder produced binary building masks.&lt;/p>
+&lt;p>The original setup used Dice loss, Adam with a learning rate of &lt;code>1e-4&lt;/code>, cosine annealing with warm restarts, and random flips, 90° rotations, and affine jitter. Training ran for 20 epochs on 512 × 512 patches, including a resumed second stage.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/loss_plot.png"
+width="1189"
+height="490"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/loss_plot_hu82845ee848a5b1b56e1301cd258b4741_53401_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/loss_plot_hu82845ee848a5b1b56e1301cd258b4741_53401_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Original U-Net training and validation loss and IoU over 20 epochs"
+class="gallery-image"
+data-flex-grow="242"
+data-flex-basis="582px"
+>&lt;/p>
+&lt;p>&lt;em>Historical prototype: validation IoU rose from approximately 0.52 to 0.74. These curves belong to the original experiment and are not the learning curves of the later B0/B1 models.&lt;/em>&lt;/p>
+&lt;p>The following predictions show the original model&amp;rsquo;s output:&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/ep20_1.png"
+width="1174"
+height="407"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/ep20_1_hu054ccd25786c28f1893e1ece4040cb1c_421254_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/ep20_1_hu054ccd25786c28f1893e1ece4040cb1c_421254_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Original U-Net sample prediction 1"
+class="gallery-image"
+data-flex-grow="288"
+data-flex-basis="692px"
+>
+&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/ep20_2.png"
+width="1174"
+height="407"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/ep20_2_hu63eff4212f408ca82ffa1bb30d6dedad_396288_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/ep20_2_hu63eff4212f408ca82ffa1bb30d6dedad_396288_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Original U-Net sample prediction 2"
+class="gallery-image"
+data-flex-grow="288"
+data-flex-basis="692px"
+>
+&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/ep20_3.png"
+width="1174"
+height="407"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/ep20_3_hu1baa5c0955c8473fc38900d90c36001a_478334_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/ep20_3_hu1baa5c0955c8473fc38900d90c36001a_478334_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Original U-Net sample prediction 3"
+class="gallery-image"
+data-flex-grow="288"
+data-flex-basis="692px"
+>
+&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/ep20_4.png"
+width="1174"
+height="407"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/ep20_4_hufc5ba8b174b87680a2806c59a6ffe504_486031_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/ep20_4_hufc5ba8b174b87680a2806c59a6ffe504_486031_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Original U-Net sample prediction 4"
+class="gallery-image"
+data-flex-grow="288"
+data-flex-basis="692px"
+>&lt;/p>
+&lt;p>After mask cleaning and simplification, the predictions were converted to vector polygons:&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/building_footprint.png"
+width="2180"
+height="1168"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/building_footprint_hu8307315ca7b1cca3fd690fca62a7eaf4_7239272_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/building_footprint_hu8307315ca7b1cca3fd690fca62a7eaf4_7239272_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Vectorized footprints from the original U-Net experiment over aerial imagery"
+class="gallery-image"
+data-flex-grow="186"
+data-flex-basis="447px"
+>&lt;/p>
+&lt;p>This established an end-to-end imagery-to-polygon baseline. Later work focused on the harder problems behind a useful inventory: separating neighboring buildings, retaining narrow recesses, handling courtyards and curved structures, and recognizing when the available evidence is insufficient to justify an edit.&lt;/p>
+&lt;h2 id="2-adding-elevation-and-auditing-the-inputs">2. Adding elevation and auditing the inputs&lt;/h2>
+&lt;p>RGB imagery provides texture and roof edges, while a normalized digital surface model (nDSM) supplies height above terrain. The current sensor workflow aligns RGB and elevation on a common local UTM grid at 1 m resolution, usually in 512 × 512 windows.&lt;/p>
+&lt;p>NAIP imagery is selected from available acquisitions through 2025. The workflow tries newer years first and uses a same-year mosaic where possible; source imagery is not uniformly native 1 m or from the same year. The production preparation accepts windows with at least 98% valid RGB coverage.&lt;/p>
+&lt;p>Elevation comes from available USGS 3DEP DSM/DTM raster pairs. Pairing checks project identity, coordinate reference system, units, and spatial overlap. The physical nDSM retains the signed difference &lt;code>DSM − DTM&lt;/code>. Only the model input is clipped to 0–30 m and scaled; the original signed heights remain available for geometric decisions.&lt;/p>
+&lt;p>Missing elevation is explicit. RGB validity, height validity, and label-supervision validity have separate roles. An unavailable height pixel is not interpreted as ground, and the absence of a discovered DSM/DTM pair does not establish that a region has no LiDAR.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Six-state input status&lt;/th>
+&lt;th style="text-align:right">Windows&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Ready with complete height coverage&lt;/td>
+&lt;td style="text-align:right">417,927&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ready with partial height coverage&lt;/td>
+&lt;td style="text-align:right">257,999&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ready with RGB-only fallback&lt;/td>
+&lt;td style="text-align:right">321,596&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Held for insufficient RGB coverage&lt;/td>
+&lt;td style="text-align:right">2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total registered&lt;/td>
+&lt;td style="text-align:right">997,524&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Data auditing became a substantial part of the research. It included checking original Massachusetts 15 cm imagery against cached crops, repairing preprocessing inconsistencies, and excluding earlier evaluations in which official reference geometry had influenced elevation preparation. Those invalid evaluations are not used as evidence here.&lt;/p>
+&lt;h2 id="3-from-u-net-to-rgbheight-and-shape-aware-models">3. From U-Net to RGB–height and shape-aware models&lt;/h2>
+&lt;h3 id="b0-rgb-led-height-fusion">B0: RGB-led height fusion&lt;/h3>
+&lt;p>The current B0 model is a custom ResNet-50 RGB encoder with a feature-pyramid decoder and a separate height branch. At multiple feature scales, a learned gate combines RGB and height features while accounting for valid elevation coverage. A separate RGB pathway remains available, and a completely missing height input returns the RGB-only result.&lt;/p>
+&lt;p>This is more than concatenating a fourth channel onto the original U-Net. Height-validity masks are auxiliary metadata, and the learned gates are not calibrated confidence probabilities. Earlier bottleneck and multiscale fusion experiments helped motivate this design, but they are distinct model versions.&lt;/p>
+&lt;h3 id="b1-learning-boundary-and-orientation-detail">B1: learning boundary and orientation detail&lt;/h3>
+&lt;p>B1 extends B0 with native-resolution RGB features, a boundary head, and a fourfold orientation representation, &lt;code>(cos(4θ), sin(4θ))&lt;/code>. A residual mask head starts at zero so that initialization preserves the inherited B0 prediction.&lt;/p>
+&lt;p>Training combines masked mask losses with RGB auxiliary, boundary, and orientation objectives. The orientation targets come from training-label boundaries; they are not independent geometric ground truth. The model provides evidence for shape refinement without forcing every roof to be rectangular or directly decoding finished vector polygons.&lt;/p>
+&lt;p>The frozen production checkpoints reached the following Orange County development scores:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Frozen checkpoint&lt;/th>
+&lt;th style="text-align:right">IoU (%)&lt;/th>
+&lt;th style="text-align:right">Boundary F1 at 1 m (%)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>B0 control&lt;/td>
+&lt;td style="text-align:right">84.89&lt;/td>
+&lt;td style="text-align:right">86.76&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>B1 shape-aware&lt;/td>
+&lt;td style="text-align:right">84.97&lt;/td>
+&lt;td style="text-align:right">87.03&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The selected B0 and B1 checkpoints had different training-update budgets, so these numbers are a checkpoint comparison, not an equal-budget ablation of the shape heads. Production continues to use these frozen September 9 checkpoints; subsequent training results have not automatically replaced them.&lt;/p>
+&lt;h3 id="resolution-and-geographic-transfer">Resolution and geographic transfer&lt;/h3>
+&lt;p>We also compared native 15 cm Massachusetts pretraining with a synthetic 1 m counterpart before transfer to real NAIP imagery. With the same downstream training budget, the best NAIP IoUs were 85.0093% without extra pretraining, 85.0189% with 15 cm pretraining, and 85.0337% with 1 m pretraining. The pretrained arms had additional upstream training, and the small differences do not establish a meaningful nationwide advantage for higher-resolution pretraining.&lt;/p>
+&lt;p>A September 17 continuation expanded training to 18,921 patches. Relative to the frozen production B1, the selected model&amp;rsquo;s Massachusetts development IoU increased from 76.14% to 77.01%, and the Colorado/Connecticut development IoU increased from 61.93% to 68.89%. Orange County remained approximately 84.95%. These are development-set results against inherited labels, not proof that the model corrects errors in GBA.&lt;/p>
+&lt;h2 id="4-expanding-training-and-testing-what-actually-helps">4. Expanding training and testing what actually helps&lt;/h2>
+&lt;p>Training subsequently grew to 29,525 and then &lt;strong>50,000 distinct patches&lt;/strong>, with &lt;strong>818 fixed development-validation patches&lt;/strong>. The validation set contains 231 Orange County, 75 Massachusetts, and 512 Colorado/Connecticut patches. The historical 447-patch Orange County test set was not added to these continuation runs.&lt;/p>
+&lt;p>The expansion uses original GBA labels and existing prepared inputs. Additional Alabama, Arkansas, and Arizona locations increase scene diversity, including denser and larger-building settings. Sampling balances state, building-label density, and elevation availability; Massachusetts patches are sampled separately because of their different dimensions. Colorado and Connecticut remain outside training. This improves the experimental design without making the dataset nationally representative.&lt;/p>
+&lt;h3 id="longer-training-and-elevation-robustness">Longer training and elevation robustness&lt;/h3>
+&lt;p>The September 18 ten-hour continuation did not produce a new best checkpoint. The later 50,000-patch balanced continuation reached 48 cumulative training-budget hours and 1,404,698 updates in its completed September 20 run, again retaining the inherited best. A further continuation was initiated, but a planned duration is not reported here as a completed experiment.&lt;/p>
+&lt;p>A September 21 factorial experiment compared four 30,000-update B1 arms: low learning rate, a warmup/cosine alternative, and each schedule with conservative height augmentation. Height augmentation included missing blocks, fully missing elevation, mild blur, and small shifts. None met the predefined improvement criterion. A follow-on queue completed six replication arms before being checkpointed during another arm; the planned long-budget queue was not completed.&lt;/p>
+&lt;h3 id="b0-local-r0-and-a-context-augmented-b0">B0, local R0, and a context-augmented B0&lt;/h3>
+&lt;p>The September 22 comparison trained three routes for 30,000 updates each on the same sample sequence. Here are the final endpoint IoUs, rather than the best intermediate scores:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Route&lt;/th>
+&lt;th style="text-align:right">Orange County IoU (%)&lt;/th>
+&lt;th style="text-align:right">Massachusetts IoU (%)&lt;/th>
+&lt;th style="text-align:right">CO/CT IoU (%)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>B0&lt;/td>
+&lt;td style="text-align:right">84.64&lt;/td>
+&lt;td style="text-align:right">77.69&lt;/td>
+&lt;td style="text-align:right">67.69&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Local R0 reconstruction&lt;/td>
+&lt;td style="text-align:right">78.64&lt;/td>
+&lt;td style="text-align:right">72.25&lt;/td>
+&lt;td style="text-align:right">66.61&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>B0 + GSTDM context module&lt;/td>
+&lt;td style="text-align:right">84.60&lt;/td>
+&lt;td style="text-align:right">77.27&lt;/td>
+&lt;td style="text-align:right">67.29&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The added context module did not outperform B0 on these endpoint IoUs. R0 is a local reconstruction, not the original MMRAD authors&amp;rsquo; implementation. Initialization, normalization, and architecture-specific learning rates differ, so this practical comparison does not isolate architecture alone or rule out a better-tuned R0.&lt;/p>
+&lt;h3 id="september-24-targeted-sampling">September 24: targeted sampling&lt;/h3>
+&lt;p>The latest completed experiment held the B1 architecture, parent checkpoint, loss, labels, and split fixed. Arm A used the existing balanced sampler. Arm B increased sampling of supported small components, partly missed large components, complex boundaries, and selected missing-height patches within the same strata. Candidates came only from training data; labels were not changed.&lt;/p>
+&lt;p>Both arms completed 30,000 updates and 239,947 sample exposures. Their sample identities intentionally differed.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Final endpoint&lt;/th>
+&lt;th style="text-align:right">Balanced A&lt;/th>
+&lt;th style="text-align:right">Targeted B&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Orange County IoU (%)&lt;/td>
+&lt;td style="text-align:right">84.9150&lt;/td>
+&lt;td style="text-align:right">84.9015&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Massachusetts IoU (%)&lt;/td>
+&lt;td style="text-align:right">76.7867&lt;/td>
+&lt;td style="text-align:right">76.8358&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CO/CT IoU (%)&lt;/td>
+&lt;td style="text-align:right">68.6807&lt;/td>
+&lt;td style="text-align:right">68.7701&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mean Orange County + CO/CT boundary F1 (%)&lt;/td>
+&lt;td style="text-align:right">77.5182&lt;/td>
+&lt;td style="text-align:right">77.6091&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Targeted sampling increased the mean boundary score by &lt;strong>0.0909 percentage points&lt;/strong>, below the required 0.1-point gain, and remained below the parent model&amp;rsquo;s 78.0572%. It therefore did not trigger the conditional second-seed experiment. Both protected best checkpoints remained at the parent model. This is a useful negative result: more focused sampling did not yet solve the remaining errors.&lt;/p>
+&lt;h2 id="5-using-model-evidence-to-refine-existing-footprints">5. Using model evidence to refine existing footprints&lt;/h2>
+&lt;p>The vector workflow starts with &lt;strong>GlobalBuildingAtlas&lt;/strong>, retaining its building identities and separation between neighboring objects. RGB edges, signed elevation, and B0/B1 probabilities support proposals for local additions, removals, curved outlines, and courtyard openings.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/Figure_2_workflow.png"
+width="4260"
+height="2654"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/Figure_2_workflow_hubb09db7a6c6c0415aa2f2e8f0d424ec8_536390_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/Figure_2_workflow_hubb09db7a6c6c0415aa2f2e8f0d424ec8_536390_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Scientific workflow connecting original GBA, RGB and elevation evidence, local changes, and paired evaluation"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="385px"
+>&lt;/p>
+&lt;p>&lt;em>September 11 scientific workflow. Official reference polygons are used for scoring and provenance review, not for generating candidates in this frozen evaluation.&lt;/em>&lt;/p>
+&lt;p>Earlier V5/V6 processing reshaped too much of the existing inventory. A census covered 7,525 train/validation windows and 591,775 unique buildings, while a separate 40-window MassGIS comparison found pooled IoU falling from 93.18% for GBA to about 80.20% after the older processing. This motivated V7&amp;rsquo;s emphasis on local changes and retaining existing detail.&lt;/p>
+&lt;p>V7 requires multiple forms of support before accepting an edit. Additions use model probabilities, image-boundary evidence, and height where available; missing height invokes stricter image/model requirements. Removals require strong negative model evidence and valid low-height support. Circular or elliptical replacements and courtyard openings have separate geometric checks. Neighbor constraints help prevent objects from merging or encroaching on one another.&lt;/p>
+&lt;p>The current workflow flags possible small false positives for review instead of deleting whole buildings, and it does not create new building instances. Inherited GBA heights remain inherited attributes; this pipeline does not re-estimate building heights.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/Figure_4_curved_and_courtyard.png"
+width="4218"
+height="3447"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/Figure_4_curved_and_courtyard_hu7da358f4ad02be29522d0bb9d6bd7277_299303_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/Figure_4_curved_and_courtyard_hu7da358f4ad02be29522d0bb9d6bd7277_299303_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Selected circular-structure and courtyard examples comparing RGB imagery, original GBA, and scientific V7"
+class="gallery-image"
+data-flex-grow="122"
+data-flex-basis="293px"
+>&lt;/p>
+&lt;p>&lt;em>Selected September 11 examples: a circular structure in Springfield and a courtyard in Orange County. These illustrate particular mechanisms; they are not a random sample of successful edits or demonstrations of the later production circle policy.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/Figure_5_local_boundary_changes.png"
+width="4218"
+height="2466"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/Figure_5_local_boundary_changes_hu03d6892b9695085fc8c6a11acf70858d_265357_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/Figure_5_local_boundary_changes_hu03d6892b9695085fc8c6a11acf70858d_265357_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Selected local boundary revisions comparing original GBA with scientific V7 on the same imagery"
+class="gallery-image"
+data-flex-grow="171"
+data-flex-basis="410px"
+>&lt;/p>
+&lt;p>&lt;em>Local boundary proposals from the frozen scientific version. Each comparison uses the same observed imagery and extent.&lt;/em>&lt;/p>
+&lt;h2 id="6-multi-region-evaluation-improvements-and-failures">6. Multi-region evaluation: improvements and failures&lt;/h2>
+&lt;p>The accepted September 11 scientific evaluation contains &lt;strong>48,772 unique GBA objects&lt;/strong>, including 60 development examples. V7 modified &lt;strong>1,887 objects (3.87%)&lt;/strong>. The modification categories below describe actions, not independently verified improvements.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Modification category&lt;/th>
+&lt;th style="text-align:right">Objects&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Local additions&lt;/td>
+&lt;td style="text-align:right">1,319&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Local removals&lt;/td>
+&lt;td style="text-align:right">347&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Circular or elliptical revisions&lt;/td>
+&lt;td style="text-align:right">135&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Both additions and removals&lt;/td>
+&lt;td style="text-align:right">83&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Courtyard openings&lt;/td>
+&lt;td style="text-align:right">3&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The main reference comparison covers &lt;strong>389 windows and 71.42 km² of evaluation cores&lt;/strong> across Massachusetts expansion areas, Springfield, Salt Lake County, and Forsyth County.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/Figure_1_coverage.png"
+width="4224"
+height="3355"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/Figure_1_coverage_hua704d0f09c477ff6d29b8ad9c0a09f6b_852006_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/Figure_1_coverage_hua704d0f09c477ff6d29b8ad9c0a09f6b_852006_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Map of the four scientific evaluation regions and their actual evaluation coverage"
+class="gallery-image"
+data-flex-grow="125"
+data-flex-basis="302px"
+>&lt;/p>
+&lt;p>The following scores use the same spatial cores and the &lt;code>current_reference&lt;/code> scenario. IoU is pooled intersection over pooled union; boundary F1 uses a 1 m tolerance. These are regional scores, not averages of individual-building scores.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Region&lt;/th>
+&lt;th style="text-align:right">Windows&lt;/th>
+&lt;th style="text-align:right">GBA IoU (%)&lt;/th>
+&lt;th style="text-align:right">V7 IoU (%)&lt;/th>
+&lt;th style="text-align:right">GBA BF1 (%)&lt;/th>
+&lt;th style="text-align:right">V7 BF1 (%)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Massachusetts expansion&lt;/td>
+&lt;td style="text-align:right">32&lt;/td>
+&lt;td style="text-align:right">94.72&lt;/td>
+&lt;td style="text-align:right">94.29&lt;/td>
+&lt;td style="text-align:right">96.08&lt;/td>
+&lt;td style="text-align:right">95.41&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Springfield, MA&lt;/td>
+&lt;td style="text-align:right">8&lt;/td>
+&lt;td style="text-align:right">89.63&lt;/td>
+&lt;td style="text-align:right">89.55&lt;/td>
+&lt;td style="text-align:right">90.54&lt;/td>
+&lt;td style="text-align:right">90.04&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Salt Lake County, UT&lt;/td>
+&lt;td style="text-align:right">174&lt;/td>
+&lt;td style="text-align:right">78.23&lt;/td>
+&lt;td style="text-align:right">78.09&lt;/td>
+&lt;td style="text-align:right">80.36&lt;/td>
+&lt;td style="text-align:right">79.66&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Forsyth County, NC&lt;/td>
+&lt;td style="text-align:right">175&lt;/td>
+&lt;td style="text-align:right">78.55&lt;/td>
+&lt;td style="text-align:right">78.53&lt;/td>
+&lt;td style="text-align:right">77.42&lt;/td>
+&lt;td style="text-align:right">77.39&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/Figure_3_regional_agreement.png"
+width="4221"
+height="2003"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/Figure_3_regional_agreement_hufe3aa4d8f5e975b0c4e59c5f341be9e0_239953_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/Figure_3_regional_agreement_hufe3aa4d8f5e975b0c4e59c5f341be9e0_239953_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Regional reference agreement for original GBA and scientific V7, including the observed decreases"
+class="gallery-image"
+data-flex-grow="210"
+data-flex-basis="505px"
+>&lt;/p>
+&lt;p>&lt;strong>V7&amp;rsquo;s overall agreement is slightly lower in all four regions.&lt;/strong> The modified subset deserves particular attention: among 1,371 modified objects with fixed reference matches, mean object IoU fell from 78.45% to 72.50%. Using a ±0.01 IoU threshold, 344 increased, 908 decreased, and 119 were neutral. Another 516 modified objects lacked a fixed match and are excluded from that comparison.&lt;/p>
+&lt;p>Those subset scores are object averages and cannot be directly compared with the pooled regional scores. The result nevertheless shows why a small overall decrease should not conceal larger problems among the objects actually changed.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/p/building-footprint-extraction/Figure_6_failure_modes.png"
+width="4218"
+height="4686"
+srcset="https://yinanfeng.com/p/building-footprint-extraction/Figure_6_failure_modes_hu5db8f8bf0e25447f7c1c2087b1c1ec11_420239_480x0_resize_box_3.png 480w, https://yinanfeng.com/p/building-footprint-extraction/Figure_6_failure_modes_hu5db8f8bf0e25447f7c1c2087b1c1ec11_420239_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Scientific V7 failure cases showing lost recesses, inappropriate ellipse fitting, and boundary overextension"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="216px"
+>&lt;/p>
+&lt;p>&lt;em>Failure examples from Salt Lake County. A cleaner-looking polygon can remove real details, fit an inappropriate curve, or extend beyond the supported boundary.&lt;/em>&lt;/p>
+&lt;p>Reference provenance also matters. Government building datasets may share ancestry with OSM or other inputs to GBA, and imagery and reference footprints can represent different dates. We therefore describe these scores as &lt;strong>reference agreement&lt;/strong>, not uniformly independent ground-truth accuracy. Neither selected visual examples nor repeatedly used development sets establish nationwide improvement.&lt;/p>
+&lt;h2 id="7-moving-from-scientific-experiments-to-production">7. Moving from scientific experiments to production&lt;/h2>
+&lt;p>Production uses frozen models, tiled processing, stable source identifiers, neighbor context, and resumable work records. Each committed product retains the final and original geometry, modification flags and reasons, inherited attributes, input coverage, and processing versions. A per-cell commit manifest identifies the active files, preventing older and newer outputs from being combined accidentally.&lt;/p>
+&lt;h3 id="a-stricter-circle-policy">A stricter circle policy&lt;/h3>
+&lt;p>Production review exposed inappropriate circular replacements. The September 18 policy therefore requires exact OSM type-and-ID reference confirmation for applicable circle proposals. Unconfirmed candidates revert to the original GBA geometry. Missing confirmation means insufficient support, not proof that the proposed curve is wrong.&lt;/p>
+&lt;p>In a 24,853-building Los Angeles pilot, all 88 circle proposals were withdrawn because they lacked the required support, reducing the modified count from 317 to 229. Applying the policy to 148,411 previously committed buildings withdrew 235 circle proposals and reduced modifications from 1,244 to 1,009. This is a conservative production check, not an independent accuracy assessment.&lt;/p>
+&lt;p>Recognized invalid candidate geometries also fall back to valid original geometry with a recorded reason. Invalid source geometry or missing required context is held for review. The later CPU recovery preserves these scientific rules while improving resumability and avoiding competing coordinators writing to the same queue.&lt;/p>
+&lt;h3 id="scale-and-version-boundaries">Scale and version boundaries&lt;/h3>
+&lt;p>At &lt;strong>September 24, 2026, 16:19 EDT&lt;/strong>, the production status recorded &lt;strong>2,249 completed delivery cells, 7,462,544 committed building objects, and 176,795 modified objects (about 2.37%)&lt;/strong>. Processing remains incomplete. The current prepared scope covers six states; the longer-term target is the contiguous United States and Washington, DC, with Alaska and Hawaii deferred.&lt;/p>
+&lt;p>Three versions must remain distinguishable:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Version&lt;/th>
+&lt;th>What its evidence supports&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>September 11 scientific V7&lt;/td>
+&lt;td>The four-region comparison and figures above&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Subsequent production V7 with OSM circle confirmation&lt;/td>
+&lt;td>Committed output counts, engineering checks, and policy-specific local audits&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Later rural/50,000-patch model experiments&lt;/td>
+&lt;td>Development metrics; these models have not replaced production weights&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The current production circle policy has not been rescored across the same four-region protocol. The 2.37% production modification rate and 3.87% scientific-cohort rate therefore describe different populations and versions, not an accuracy trend.&lt;/p>
+&lt;h2 id="8-what-comes-next">8. What comes next&lt;/h2>
+&lt;p>The next priorities are to evaluate the current production policy on the same frozen reference domains, obtain more independent geographic evaluation, and diagnose errors by building size, boundary complexity, and elevation availability. The recent negative training results make targeted error analysis more useful than assuming that more updates or another module will improve the product.&lt;/p>
+&lt;p>Application work also needs explicit footprint semantics: a roof extension, open canopy, or courtyard can matter differently for building-energy modeling and other spatial analyses. Those uses motivate inspectable geometry and source attributes, but downstream application benefits have not yet been established by the results reported here.&lt;/p>
+&lt;p>A data-descriptor manuscript and its supporting figures have been drafted. A public data repository, persistent identifier, final release coverage, and release documentation are still pending. The immediate deliverable is an auditable research and processing workflow with measured strengths and weaknesses.&lt;/p>
+&lt;h2 id="research-records-and-resources">Research records and resources&lt;/h2>
+&lt;p>The numeric tables in this update were checked against frozen evaluation tables and completed experiment records. Small companion files provide the values and version identifiers behind the post:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="regional-validation.csv" >Regional reference-agreement results (CSV)&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="development-experiments.csv" >Final endpoint results for the architecture and targeted-sampling experiments (CSV)&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="update-sources.txt" >Source and version notes for this update&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Upstream data and software:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://doi.org/10.5194/essd-17-6647-2025" target="_blank" rel="noopener"
+>GlobalBuildingAtlas paper&lt;/a> and &lt;a class="link" href="https://doi.org/10.14459/2025MP1782307" target="_blank" rel="noopener"
+>dataset record&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.usgs.gov/centers/eros/science/national-agriculture-imagery-program-naip-data-dictionary" target="_blank" rel="noopener"
+>USGS NAIP data dictionary&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.mass.gov/info-details/massgis-data-2023-aerial-imagery" target="_blank" rel="noopener"
+>MassGIS 2023 aerial imagery&lt;/a> and &lt;a class="link" href="https://www.mass.gov/info-details/massgis-data-building-structures-2-d" target="_blank" rel="noopener"
+>building structures&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener"
+>OpenStreetMap contributors&lt;/a> and &lt;a class="link" href="https://download.geofabrik.de/" target="_blank" rel="noopener"
+>Geofabrik extracts&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/qubvel/segmentation_models.pytorch" target="_blank" rel="noopener"
+>Segmentation Models PyTorch&lt;/a>, used for the original U-Net prototype&lt;/li>
+&lt;li>&lt;a class="link" href="https://openaccess.thecvf.com/content/CVPR2021/html/Girard_Polygonal_Building_Extraction_by_Frame_Field_Learning_CVPR_2021_paper.html" target="_blank" rel="noopener"
+>Polygonal Building Extraction by Frame Field Learning&lt;/a>, relevant background for orientation-aware shape modeling; the present B1 is a custom implementation&lt;/li>
+&lt;/ul>
+&lt;p>All aerial-image comparison figures are existing research outputs using observed imagery. They show the explicitly labeled historical or scientific versions and have not been synthetically enhanced.&lt;/p></description></item></channel></rss>
