@@ -1,0 +1,85 @@
+Building Footprint Extraction website update — September 24, 2026
+
+These notes identify the local research records used for the post. Run identifiers
+are provenance references, not public download links. The underlying complete
+research dataset and checkpoints have not been deposited as a public release.
+CSV metrics are fractions (0–1); percentages in the article multiply them by 100.
+
+Historical baseline:
+  Feng96/personal_website, commit 4e01ce28d3c8df71b922f6b4e316d517c9744f98
+  content/post/U-NET_building_footprint/index.md and its original six PNGs.
+
+Regional scientific validation and six added figures:
+  GBA_V6circle_V7_reference_night_v003_20260911
+  manuscript/revision_20260911/tables/regional_primary.csv
+  manuscript/revision_20260911/tables/modification_inventory.csv
+  manuscript/revision_20260911/figures/Figure_1 through Figure_6
+  Filter: scenario=current_reference, evaluation_group=ALL_WITHIN_REGION.
+  Regional IoU and BF1 are pooled, not object means. BF1 tolerance is 1 m.
+  Figures show September 11 scientific V7, not the later OSM-gated production.
+  The main comparison comprises 389 windows. The processed 48,772-object cohort
+  includes 60 development cases. Selected image examples are not random samples.
+
+Modified-object comparison:
+  PAPER_WRITING_HANDOFF_20260918/05_VALIDATION_AND_REPRODUCTION.md
+  NUMERIC_TABLES/modified_fixed_pairs.csv and DERIVATION.json
+  1,371 modified objects with fixed matches; 516 other modified objects excluded.
+  Mean object IoU: GBA 0.784533278, V7 0.724981061.
+  +/-0.01 threshold: 344 increased, 908 decreased, 119 neutral.
+
+Model methods and earlier results:
+  PAPER_WRITING_HANDOFF_20260918/02_MODELS_AND_TRAINING.md
+  PAPER_WRITING_HANDOFF_20260918/03_INPUT_DATA_AND_PREPROCESSING.md
+  PAPER_WRITING_HANDOFF_20260918/04_V7_POSTPROCESSING_AND_PRODUCT.md
+  B0_real_NAIP_transfer_night_v001_20260909
+  NAIP_rural_continue_v001_20260917
+  NAIP_rural_overnight_v002_20260918
+
+Latest completed model experiments:
+  NAIP_balanced50k_v003_20260918/TRAINING_DONE.json
+  NAIP_balanced50k_resume_v006_20260920/TRAINING_DONE.json
+  NAIP_LR_height_factorial_v001_20260921/DONE.json
+  NAIP_LR_height_longqueue_v002_20260921/PARTIAL_COMPARISON.json and STATUS.json
+  NAIP_B0_R0_hybrid_v001_20260922/DONE.json
+  NAIP_targeted_sampling_v001_20260924/DONE.json
+  The companion development CSV uses final_validation only, not best_validation.
+  naip_val=Orange County; ma_val=Massachusetts; new_val=Colorado/Connecticut.
+  These are repeatedly used development data, not independent national tests.
+  Architecture routes have different initialization/normalization/LR histories.
+  Targeted sampling uses equal updates and exposures, intentionally different
+  sample identities. Its conditional second-seed follow-up was not triggered.
+
+Inputs and frozen production probabilities:
+  USBF_AC_multinode_v004_20260913/COMBINED_STATUS.json
+  USBF_AC_probability_v001_20260914/unified_20260916/STATUS.json
+  997,524 registered; 997,522 ready with probabilities; 2 RGB-held windows.
+  Complete/partial/no height: 417,927 / 257,999 / 321,596.
+  Scope: AL/AZ/AR/CA/CO/CT. Not national completion or training-set size.
+
+Production snapshot:
+  USBF_V7_cpu_resume_v002_20260921/STATUS.json
+  updated_unix=1790281176.642932 (2026-09-24 16:19:36 EDT)
+  2,249 complete delivery cells; 7,462,544 committed buildings; 176,795 modified.
+  OSM policy: V7_OSM_circle_confirmation_v1_20260918
+  Geometry policy: V7_geometry_source_fallback_v2_zero_area_20260919
+  Counts are an explicitly dated internal status snapshot, not a public release
+  or measured precision. Later runs may report larger counts.
+  Production still uses the frozen September 9 B0/B1 checkpoints.
+
+Source and release boundaries:
+  Original GBA geometry, height attributes, and source IDs are retained.
+  Modification counts are not certified improvements. Reference sources may
+  share lineage with GBA/OSM and may differ in acquisition date.
+  The production OSM circle policy has not undergone the same four-region
+  re-evaluation. No DOI, full national release, or downstream application gain
+  is claimed for USBF in this article.
+
+Companion file SHA256 hashes (unaltered research figures and numeric extracts):
+39168f70b27b776efed8087d3b68d88952c60c601a6d6255b5e9768eaa15d227  Figure_1_coverage.png
+55d5cf1f9f85ecc5828893c00b5a85ed1d788f20857b9634cc7d31e6e4daaa85  Figure_2_workflow.png
+0065c783ab9468e21150e7ce44cf4d01be37330236ca2c8ed1adce097beb34ff  Figure_3_regional_agreement.png
+d5415c02075423dda4cb2134c061b72423b16d47e97301598dfa4c2650ace7bb  Figure_4_curved_and_courtyard.png
+ced7285c28277361320ff643e42d225e51a82023616a1d4fc6a95db474b70865  Figure_5_local_boundary_changes.png
+2f81a01bb8c0205858299ca061297187870a4b8d0a8ca6232926d221f1b64ce6  Figure_6_failure_modes.png
+b7a3a69e9547dd34d8519cf43c4264cfc6feda146e94ca6a3fc119c30aae07d7  development-experiments.csv
+0b5cc6e22afb5607ff18b5871a276e9f2749c7fd7bb3f455ec7337d117784104  regional-validation.csv
