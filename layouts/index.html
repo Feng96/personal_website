@@ -1,34 +1,33 @@
 {{ define "body-class" }}home-profile{{ end }}
 {{ define "main" }}
 <section class="profile-intro">
-    <p class="profile-eyebrow">Yinan Feng · Geography & GeoAI</p>
-    <h1>Understanding places.<br><em>Building open tools.</em></h1>
+    <p class="profile-eyebrow">Geography · Remote sensing · GeoAI</p>
+    <h1>Yinan Feng <span class="chinese-name" lang="zh-Hans">冯祎楠</span></h1>
     <div class="profile-copy">{{ .Content }}</div>
     <nav class="profile-links" aria-label="Profile links">
-        <a class="primary-link" href="{{ "research/" | relURL }}">Explore my research ↗</a>
+        <a class="primary-link" href="{{ "research/" | relURL }}">Research</a>
         <a href="{{ "cv/" | relURL }}">CV & resume</a>
-        <a href="mailto:yfeng21@vols.utk.edu">Get in touch</a>
+        <a href="mailto:yfeng21@vols.utk.edu">Email</a>
     </nav>
-    <p class="profile-location">University of Tennessee, Knoxville · Remote sensing · Geospatial data</p>
 </section>
 
 <section class="home-section" aria-labelledby="selected-work">
-    <div class="home-section-heading"><div><p class="profile-eyebrow">Research into practice</p><h2 id="selected-work">Selected work</h2></div><a href="{{ "research/" | relURL }}">All research →</a></div>
+    <div class="home-section-heading"><h2 id="selected-work">Projects</h2><a href="{{ "research/" | relURL }}">Research →</a></div>
     <article class="featured-work">
         <a class="featured-image" href="{{ "projects/usbf/" | relURL }}"><img src="{{ "images/usbf-boundaries.png" | relURL }}" alt="Research comparison of aerial imagery and original and revised building footprints" width="1200" height="750" loading="eager"></a>
-        <div class="featured-copy"><p class="profile-eyebrow">01 / Open building data</p><h3><a href="{{ "projects/usbf/" | relURL }}">US Building Footprint</a></h3><p>From aerial imagery and elevation to a traceable building inventory. USBF selectively refines existing outlines while retaining original geometry, source heights, and edit history.</p><p class="work-fact"><strong>25.1 million</strong> buildings in the published six-state update</p><div class="work-links"><a href="{{ "projects/usbf/" | relURL }}">Project & data →</a><a href="https://github.com/Feng96/USBF_src">Code ↗</a></div></div>
+        <div class="featured-copy"><p class="profile-eyebrow">Building data</p><h3><a href="{{ "projects/usbf/" | relURL }}">US Building Footprint</a></h3><p>USBF uses aerial imagery and elevation to refine selected GlobalBuildingAtlas footprints. It retains the original outlines, source heights, and edit records.</p><p class="work-fact"><strong>25.1 million</strong> buildings in the published six-state update</p><div class="work-links"><a href="{{ "projects/usbf/" | relURL }}">Project & data →</a><a href="https://github.com/Feng96/USBF_src">Code ↗</a></div></div>
     </article>
     <div class="project-grid">
-        <article class="project-card"><a class="project-image portal-image" href="https://feng96.github.io/USBF_site/"><img src="{{ "images/us-buildings-workspace.png" | relURL }}" alt="US Buildings browser GIS with a map, data layers and geospatial tools" width="1200" height="750" loading="lazy"></a><div class="project-copy"><p class="profile-eyebrow">02 / Interactive geospatial software</p><h3><a href="https://feng96.github.io/USBF_site/">US Buildings</a></h3><p>A browser workspace for exploring footprints and heights, comparing datasets, working with local data, and exporting maps. View available heights in 3D and inspect experimental roof models.</p><a class="project-link" href="https://feng96.github.io/USBF_site/">Open the workspace ↗</a></div></article>
-        <article class="project-card"><a class="project-image" href="https://feng96.github.io/research-daily/lod2/"><img src="{{ "images/roof-research.png" | relURL }}" alt="Experimental roof reconstruction viewer showing a building roof model" width="1200" height="750" loading="lazy"></a><div class="project-copy"><p class="profile-eyebrow">03 / Research in progress</p><h3><a href="https://feng96.github.io/research-daily/lod2/">From footprints to roof geometry</a></h3><p>Exploring LoD2 roof reconstruction with aerial imagery and LiDAR, including canopy contamination and local roof correction. These small-scale experiments guide the next research questions.</p><a class="project-link" href="https://feng96.github.io/research-daily/lod2/">Browse the experiments ↗</a></div></article>
+        <article class="project-card"><a class="project-image portal-image" href="https://feng96.github.io/USBF_site/"><img src="{{ "images/us-buildings-workspace.png" | relURL }}" alt="US Buildings browser GIS with a map, data layers and geospatial tools" width="1200" height="750" loading="lazy"></a><div class="project-copy"><p class="profile-eyebrow">Web GIS</p><h3><a href="https://feng96.github.io/USBF_site/">US Buildings</a></h3><p>A website I built to view building footprints and heights, compare datasets, import local files, and export maps and data.</p><a class="project-link" href="https://feng96.github.io/USBF_site/">Open website ↗</a></div></article>
+        <article class="project-card"><a class="project-image" href="https://feng96.github.io/research-daily/lod2/"><img src="{{ "images/roof-research.png" | relURL }}" alt="Experimental roof reconstruction viewer showing a building roof model" width="1200" height="750" loading="lazy"></a><div class="project-copy"><p class="profile-eyebrow">Current research</p><h3><a href="https://feng96.github.io/research-daily/lod2/">LoD2 roof reconstruction</a></h3><p>Experiments using aerial imagery and LiDAR to reconstruct roofs, identify canopy contamination, and test local roof corrections.</p><a class="project-link" href="https://feng96.github.io/research-daily/lod2/">View experiments ↗</a></div></article>
     </div>
 </section>
 
-<section class="home-section research-log" aria-labelledby="research-log"><p class="profile-eyebrow">The work behind the work</p><h2 id="research-log">Research, in the open.</h2><p>I keep dated notes on experiments, data production, results, and questions still to answer.</p><div class="work-links"><a href="https://feng96.github.io/research-daily/">Read Research Daily ↗</a><a href="{{ "research-notes/" | relURL }}">Technical notes →</a><a href="{{ "publications/" | relURL }}">Publications →</a></div></section>
+<section class="home-section research-log" aria-labelledby="research-log"><h2 id="research-log">Research Daily</h2><p>Notes on experiments, data processing, and results.</p><div class="work-links"><a href="https://feng96.github.io/research-daily/">Research Daily ↗</a><a href="{{ "research-notes/" | relURL }}">Research notes →</a><a href="{{ "publications/" | relURL }}">Publications →</a></div></section>
 
 {{ $posts := where .Site.RegularPages "Type" "post" }}
 {{ $posts = where $posts "Params.hidden" "!=" true }}
-{{ range slice (dict "key" "research" "title" "Research & technical notes" "url" "research-notes/") (dict "key" "life" "title" "Life beyond research" "url" "life/") }}
+{{ range slice (dict "key" "research" "title" "Research notes" "url" "research-notes/") (dict "key" "life" "title" "Life" "url" "life/") }}
 <section class="home-section" aria-labelledby="latest-{{ .key }}"><div class="home-section-heading"><h2 id="latest-{{ .key }}">{{ .title }}</h2><a href="{{ .url | relURL }}">View all →</a></div><div class="article-list--compact">{{ range first 3 ((where $posts "Params.stream" .key).ByLastmod.Reverse) }}{{ partial "article-list/compact" . }}{{ end }}</div></section>
 {{ end }}
 <p class="archive-link"><a href="{{ "archives/" | relURL }}">Browse the complete archive →</a></p>

@@ -10,4 +10,4 @@ menu:
 ---
 I'm a **PhD candidate in Geography** at the University of Tennessee, Knoxville, advised by [Dr. Qiusheng Wu](https://wetlands.io/).
 
-I work at the intersection of remote sensing, GeoAI, and the built environment. I build geospatial datasets and tools that connect aerial imagery, building footprints, and elevation—and make the results easier to inspect and use.
+My research focuses on building footprints, heights, and roof geometry using aerial imagery and LiDAR. I develop the USBF dataset and the US Buildings website.

@@ -90,4 +90,11 @@ _School of Chemical & Environmental Engineering_\
   At the Institute of Automation, Chinese Academy of Science\
   > Inventing a method for correcting PM 2.5 sensors based on linear regression algorithm. Based on accurate data received from PM 2.5 monitoring station near the proximity of the PM 2.5 sensor, the method uses linear regression algorithm to correct the PM 2.5 output value of the sensor, making the output value of the sensor consistent with the accurate value of PM 2.5 from the monitoring station, and therefore achieving the purpose of making the PM 2.5 sensor more accurate and reliable. Published at Australia International Patent, Publication Number:2018100221
 
----
+# Publications
+
+**Hydrogen logistics network design for hydrogen fuel cell electric long-haul trucks**\
+Rui Zhou, Frank Colin Moser, **Yinan Feng**, Mingzhou Jin, Bo Zou\
+*International Journal of Hydrogen Energy*, 215, 153889 (2026).\
+[DOI: 10.1016/j.ijhydene.2026.153889](https://doi.org/10.1016/j.ijhydene.2026.153889)
+
+[All publications](/publications/)

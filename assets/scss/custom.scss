@@ -101,7 +101,7 @@
     .main { max-width: 1120px; }
     .profile-intro { background: transparent; box-shadow: none; padding: 12px 0 30px; border-radius: 0; }
     .profile-intro h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(3.8rem, 4.8vw, 6.1rem); line-height: 1.12; letter-spacing: -.035em; margin: 20px 0 25px; }
-    .profile-intro h1 em { font-weight: 400; color: var(--accent-color); }
+    .profile-intro h1 .chinese-name { display: block; font-family: "Noto Serif CJK SC", "Songti SC", SimSun, serif; font-size: .58em; font-weight: 400; letter-spacing: .08em; margin-top: 14px; }
     .profile-copy { font-size: 1.7rem; line-height: 1.8; max-width: 67ch; }
     .profile-links a { border-radius: 999px; }
     .profile-links .primary-link { color: #fff; background: #214f46; border-color: #214f46; }
