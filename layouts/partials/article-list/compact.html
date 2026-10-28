@@ -23,10 +23,10 @@
                         {{- $Width = $thumbnail.Width -}}
                         {{- $Height = $thumbnail.Height -}}
                     {{- end -}}
-                    
-                    <img src="{{ $Permalink }}" 
+
+                    <img src="{{ $Permalink }}"
                         width="{{ $Width }}"
-                        height="{{ $Height }}" 
+                        height="{{ $Height }}"
                         alt="{{ .Title }}"
                         loading="lazy">
                 {{ else }}
