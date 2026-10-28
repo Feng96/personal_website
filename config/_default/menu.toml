@@ -30,3 +30,17 @@ url = "mailto:yfeng21@vols.utk.edu"
 
 [social.params]
 icon = "mail"
+
+[[social]]
+identifier = "scholar"
+name = "Google Scholar"
+url = "https://scholar.google.com/citations?user=pFWcxfcAAAAJ&hl=en"
+[social.params]
+icon = "paper"
+
+[[social]]
+identifier = "research-daily"
+name = "Research Daily"
+url = "https://feng96.github.io/research-daily/"
+[social.params]
+icon = "atom"

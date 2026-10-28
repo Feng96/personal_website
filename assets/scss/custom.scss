@@ -1,3 +1,141 @@
-/*
-    You can add your own custom styles here.
-*/
+.profile-intro {
+    padding: clamp(24px, 4vw, 44px);
+    border-radius: var(--card-border-radius);
+    background: var(--card-background);
+    box-shadow: var(--shadow-l1);
+    color: var(--card-text-color-main);
+
+    h1 { font-size: clamp(3rem, 5vw, 4.6rem); margin: 12px 0 20px; }
+}
+
+.profile-eyebrow {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--card-text-color-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.profile-copy {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    max-width: 72ch;
+    p { margin: 0 0 16px; }
+    a { text-decoration: underline; text-underline-offset: 3px; }
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+    a {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 16px;
+        min-height: 44px;
+        border: 1px solid var(--card-separator-color);
+        border-radius: 6px;
+        font-size: 1.4rem;
+        color: var(--accent-color);
+        &:hover, &[aria-current="page"] { background: var(--card-background-selected); }
+    }
+}
+
+.home-section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+    h2 { margin: 0; font-size: 2.2rem; color: var(--accent-color); }
+    a { font-size: 1.4rem; }
+}
+
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.project-card {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.project-image {
+    display: flex;
+    height: 200px;
+    background: #fff;
+    img { display: block; width: 100%; height: 100%; object-fit: contain; }
+}
+.project-copy {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    h3 { margin: 10px 0; font-size: 2rem; line-height: 1.35; color: var(--card-text-color-main); }
+    > p:not(.profile-eyebrow) { font-size: 1.5rem; line-height: 1.7; color: var(--card-text-color-secondary); margin: 0 0 18px; }
+    .project-link { margin-top: auto; font-size: 1.4rem; }
+}
+.collection-description { font-size: 1.9rem; line-height: 1.6; color: var(--card-text-color-secondary); }
+.article-stream { font-size: 1.3rem; font-weight: 700; letter-spacing: .04em; }
+.article-time .post-date--updated { font-weight: 700; color: var(--accent-color); }
+.archive-link { margin: 0; font-size: 1.4rem; }
+.profile-links a:focus-visible, .project-card a:focus-visible, .home-section a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+@media (max-width: 700px) {
+    .project-grid { grid-template-columns: 1fr; }
+    .profile-intro h1 { font-size: 3.2rem; }
+    .home-section-heading h2 { font-size: 2rem; }
+}
+
+/* A quiet research portfolio within the existing Stack shell. */
+:root { --accent-color: #214f46; --accent-color-darker: #173a33; }
+[data-scheme="dark"] { --accent-color: #a3cfbd; --accent-color-darker: #c8e6d8; }
+.home-profile {
+    .right-sidebar { display: none; }
+    .main { max-width: 1120px; }
+    .profile-intro { background: transparent; box-shadow: none; padding: 12px 0 30px; border-radius: 0; }
+    .profile-intro h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(3.8rem, 4.8vw, 6.1rem); line-height: 1.12; letter-spacing: -.035em; margin: 20px 0 25px; }
+    .profile-intro h1 em { font-weight: 400; color: var(--accent-color); }
+    .profile-copy { font-size: 1.7rem; line-height: 1.8; max-width: 67ch; }
+    .profile-links a { border-radius: 999px; }
+    .profile-links .primary-link { color: #fff; background: #214f46; border-color: #214f46; }
+    .profile-links .primary-link:hover { background: #173a33; }
+    .profile-location { font-size: 1.2rem; color: var(--card-text-color-secondary); margin-top: 24px; line-height: 1.7; }
+    .home-section { margin-top: 18px; }
+    .home-section-heading h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 2.7rem; }
+    .home-section-heading .profile-eyebrow { margin-bottom: 9px; }
+    .profile-eyebrow { color: var(--accent-color); font-size: 1.1rem; letter-spacing: .13em; }
+    .project-card, .featured-work { border: 1px solid var(--card-separator-color); box-shadow: none; }
+    .project-grid { margin-top: 22px; }
+    .project-image { height: 230px; }
+    .project-image img { object-fit: cover; }
+    .project-copy h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 2.5rem; }
+    .project-copy { padding: 26px; }
+    .research-log { padding: 32px; border-block: 1px solid var(--card-separator-color); }
+    .research-log h2 { font: 400 3rem/1.2 Georgia, serif; color: var(--card-text-color-main); margin: 14px 0; }
+    .research-log > p:not(.profile-eyebrow) { font-size: 1.6rem; line-height: 1.8; color: var(--card-text-color-secondary); max-width: 63ch; }
+}
+.featured-work { display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden; background: var(--card-background); border-radius: var(--card-border-radius); }
+.featured-image { display: flex; min-height: 340px; align-items: center; background: #f3f1e8; }
+.featured-image img { display: block; width: 100%; height: auto; }
+.featured-copy { padding: 32px; display: flex; flex-direction: column; justify-content: center; }
+.featured-copy h3 { font: 400 3.1rem/1.15 Georgia, serif; margin: 16px 0; color: var(--card-text-color-main); }
+.featured-copy > p:not(.profile-eyebrow) { font-size: 1.5rem; line-height: 1.8; color: var(--card-text-color-secondary); }
+.featured-copy .work-fact { border-top: 1px solid var(--card-separator-color); padding-top: 18px; margin-top: 8px; }
+.work-fact strong { color: var(--accent-color); font-size: 2.1rem; display: block; }
+.work-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 1.4rem; line-height: 1.7; margin-top: 12px; }
+@media (max-width: 900px) { .featured-work { grid-template-columns: 1fr; } .featured-image { min-height: auto; max-height: 340px; overflow: hidden; } }
+@media (max-width: 700px) {
+    .home-profile .profile-intro { padding-top: 10px; }
+    .home-profile .profile-intro h1 { font-size: 4rem; }
+    .home-profile .profile-copy { font-size: 1.6rem; }
+    .featured-copy { padding: 24px; }
+    .home-profile .research-log { padding: 25px 4px; }
+    .home-profile .project-image { height: 210px; }
+}

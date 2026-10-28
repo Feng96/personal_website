@@ -1,4 +1,5 @@
 ---
+stream: "life"
 title: Cooking
 description: daily sharing the food I make myself
 slug: Pcitures

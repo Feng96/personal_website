@@ -1,39 +1,44 @@
 ---
 title: Research
+lastmod: 2026-10-28
 menu:
-    main: 
-        weight: 4
+    main:
+        weight: 2
         params:
             icon: atom
-
 comments: false
 ---
-## Current Researches
 
-Currently, as a PhD student at UT, my research landscape has evolved once more. Now, I am directing my focus on the United States building height dataset. The expansive realm of urban planning and architecture, coupled with environmental considerations, makes this a challenging yet invigorating area of research. I am eager to contribute valuable insights and analyses to this domain.
+I use **remote sensing, GeoAI, and geospatial analysis** to study the built environment and environmental change. My current work connects building footprints, elevation, and aerial imagery with open data and interactive tools.
 
-## Research at Institute of Geographical Sciences and Natural Resources (IGNRR), Chinese Academy of Sciences
+## Building footprints and open data
 
-Following my time at OSU, I embarked on a new chapter as an intern at the Institute of Geographical Sciences and Natural Resources, Chinese Academy of Sciences. Here, my research interest pivoted towards agricultural remote sensing.
+**US Building Footprint (USBF)** is my main research project. I develop methods for selective refinement of GlobalBuildingAtlas outlines using aerial imagery, signed elevation, and model evidence. The published six-state update contains **25.1 million buildings**, retaining original geometry, source heights, stable identifiers, and edit provenance.
 
-- My inaugural project at IGNRR, funded by the Natural Science Foundation of China, revolved around the new grain production patterns in China. Utilizing GRACE gravity satellite data and MODIS NDVI products, we aimed to observe the spatial distributions of changes in agricultural development juxtaposed with water resources. This was pivotal in highlighting the contradictions arising due to their differing spatial distributions.
-  
-- Following this, I embarked on a new research endeavor. This time, our objective was to employ the MODIS Active Fire product to determine the spatial and time-series change of crop residual burning events in Northeast China spanning the period from 2015 to 2020. With the Chinese government initiating a straw returning policy in this region in 2017, our intent was to leverage satellite data to discern the variations pre and post the policy's inception. This would, in turn, enable a holistic assessment of the policy's temporal and spatial ramifications.
+![Aerial imagery and building-boundary comparisons](/images/usbf-boundaries.png)
 
-## Graduate Studies at OSU
+*Local boundary proposals from the September 2026 research version; the methods post reports the corresponding evaluation.*
 
-Upon my enrollment at Ohio State University (OSU), there was a significant shift in my research interests towards Environmental Remote Sensing. Under the astute guidance of Dr. Zhao, I was introduced to the world of satellite data and its profound implications for environmental research.
+[Project overview](/projects/usbf/) · [Dataset](https://source.coop/opengeos/us-buildings) · [Code](https://github.com/Feng96/USBF_src) · [Methods and experiments](/p/building-footprint-extraction/)
 
-One of the pivotal projects during my time at OSU involved the use of GRACE satellite data. With this, we aimed to detect and analyze changes in water resources within Australia. Further deepening our research, we probed into the correlation between these water resource fluctuations and the NDVI (Normalized Difference Vegetation Index) changes. This investigation provided valuable insights into the interconnectedness of natural water reservoirs and vegetation dynamics in Australia.
+## Geospatial tools: US Buildings
 
-## Undergraduate Research
+I designed and built **US Buildings**, a browser workspace for exploring USBF and comparison inventories. It brings together footprint inspection, available-height 3D display, local data import, scoped analysis, and map and data export.
 
-During my undergraduate studies, I developed a keen interest in environmental chemistry. This laid the foundation for my passion for understanding the environment through scientific methodologies.
+[Open US Buildings](https://feng96.github.io/USBF_site/) · [Website source](https://github.com/Feng96/USBF_site)
 
-![Correlation Plot](cor_plot.jpg)
+## From footprints to LoD2 roof geometry
 
-Fig. Spatial Correlation between Total Water Storage and Cumulative NDVI, only keep piexls with p-value under 0.05
+I am exploring roof reconstruction using NAIP imagery and 3DEP LiDAR. Recent experiments examine canopy contamination, roof-support preservation, and local geometric correction. These are small-scale research results; independent roof-geometry evaluation remains an important next step.
 
-![Coverage Plot](coverage.jpg)
+[Interactive experiments](https://feng96.github.io/research-daily/lod2/) · [Method comparison](https://feng96.github.io/research-daily/lod2/paper/)
 
-Fig. Map shown the percentage of buildings with height info from Micrsoft Building footprint dataset across the United States
+## Building geometry and energy modeling
+
+During my work with the National Building Energy Model team at Oak Ridge National Laboratory, I integrated and standardized building-footprint datasets for AutoBEM and investigated how footprint area and geometry affect simulated energy use. This connects the quality of remote sensing products to their downstream use.
+
+## Environmental remote sensing
+
+Earlier work used GRACE and MODIS observations to examine the spatial mismatch between water resources and grain-planting changes in China, and Landsat time series to study fine-scale human disturbance. These projects continue to shape my interest in connecting spatial data to environmental questions.
+
+[Publications](/publications/) · [CV and resume](/cv/) · [Research Daily](https://feng96.github.io/research-daily/)

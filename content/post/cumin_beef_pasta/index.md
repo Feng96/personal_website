@@ -1,4 +1,5 @@
 ---
+stream: "life"
 title: Cumin Beef Stir Fry Pasta
 description: recipe for cuming beef pasta
 slug: Noodle

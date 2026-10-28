@@ -1,24 +1,19 @@
 ---
 title: About me
 menu:
-    main: 
-        weight: 2
+    main:
+        weight: 7
         params:
             icon: pacman
-
 comments: false
 ---
 
-Greetings! My name is Yinan Feng, and my roots trace back to the vibrant city of Nanyang, situated in the central part of China. Here, as a child, the world unfurled before me in its myriad shades. As a child, I enjoyed watching BBC Nature documentaries on TV, with ‘Planet Earth’ being my favorite. The more I delved into the natural world, the more I realized that it wasn't merely about me discovering nature's splendor but rather nature unveiling its magnificence to me. This gradual journey of understanding, discovering, and falling in love with the nature wasn't an overnight epiphany but a transformative process.
+I'm **Yinan Feng**, a PhD candidate in Geography at the University of Tennessee, Knoxville, advised by Dr. Qiusheng Wu. I work on remote sensing, GeoAI, building inventories, and tools that make geospatial research easier to explore.
 
-In 2014, my academic pursuit took a formidable shape when I entered the School of Chemical and Environmental Engineering at Liaoning University of Technology (LUT). My passion for the field then led me across the seas to Ohio State University (OSU), where I specialized in environmental remote sensing under Dr. Zhao's guidance.
+I grew up in Nanyang, China. Nature documentaries first sparked my interest in environmental questions. I studied Environmental Science at Liaoning University of Technology and earned my master's degree at Ohio State University, working with Dr. Kaiguang Zhao. Research at the Chinese Academy of Sciences introduced me to agricultural remote sensing and the relationships between water resources and food production.
 
-One of the defining moments in my academic trajectory was my internship at the Institute of Geographical Sciences and Environmental Resources, Chinese Academy of Sciences (IGNRR, CAS). It wasn't just another feather in my cap, but my first solo flight in the world of research. From conceptualizing a project to methodically crafting a manuscript, this experience shaped my understanding of research intricacies. It taught me the art of capturing research highlights and crafting a compelling narrative. My quest for knowledge is insatiable. I am currently a doctoral candidate at the University of Tennessee, dedicating my research efforts under the mentorship of Dr. Wu.
+My current projects connect aerial imagery, building footprints, and elevation. Alongside the research, I enjoy creating open datasets and software—including [USBF](/projects/usbf/) and the [US Buildings workspace](https://feng96.github.io/USBF_site/).
 
-I've been fortunate to be nurtured by diverse cultures, first in China and now in the US. My travels, often during school holidays, have taken me to various corners of China, deepening my appreciation for its rich tapestry of cultures and further fueling my love for nature.
+Outside research, I enjoy cooking, learning piano, skiing, street dance, and Big Band jazz. This website keeps a little space for those parts of life, too.
 
-Outside of academia, I am a beginner in piano, skiing, street dance, and cooking. I love Big Band Jazz music.
-
-My favorite  singers: Lana Del Rey, Sam Cooke and Paloma Faith.
-
-And bands: Queen, Coldplay
+[Research](/research/) · [CV and resume](/cv/) · [Google Scholar](https://scholar.google.com/citations?user=pFWcxfcAAAAJ&hl=en) · [Life](/life/)

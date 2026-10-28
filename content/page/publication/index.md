@@ -1,9 +1,9 @@
 ---
 title: Publications
-lastmod: 2026-10-22
+lastmod: 2026-10-28
 menu:
     main: 
-        weight: 5
+        weight: 3
         params:
             icon: paper
 
@@ -37,9 +37,20 @@ Tongxi Hu, Elizabeth Myers Toman, Gang Chen, Gang Shao, Yuyu Zhou, Yang Li, Kaig
 
 ---
 
+# Data & software
+
+**US Building Footprint (USBF)** — Open building-footprint data with source attributes and geometry provenance. The published six-state update contains 25.1 million buildings.\
+[Dataset](https://source.coop/opengeos/us-buildings) · [Project overview](/projects/usbf/) · [Reproducible workflow](https://github.com/Feng96/USBF_src)
+
+**US Buildings** — Browser GIS for footprint and height exploration, comparison datasets, local imports, and map/data export.\
+[Website](https://feng96.github.io/USBF_site/) · [Source](https://github.com/Feng96/USBF_site)
+
+**rasterarea** — A Python package for geospatial visualization.\
+[Project notes](/p/rasterarea-a-python-package/)
+
 # Apps
 
-**Wearing a Mask and keeping social distance!**  
+**Wearing a Mask and keeping social distance!**\
 I used R Shiny to design an app that downloads data from the Johns Hopkins CSSE group ([source](https://github.com/CSSEGISandData/COVID-19)), showing the last 7 days of new COVID-19 cases by state, as well as executive orders from the local government.
 
 [link to the app](https://feng945.shinyapps.io/stat5730/)
@@ -48,6 +59,6 @@ I used R Shiny to design an app that downloads data from the Johns Hopkins CSSE 
 
 # Patents
 
-**A correction method based on linear regression algorithm for PM2.5 sensors**  
-Published at Australia International Patent  
+**A correction method based on linear regression algorithm for PM2.5 sensors**\
+Published at Australia International Patent\
 Publication Number: 2018100221

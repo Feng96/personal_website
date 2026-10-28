@@ -1,9 +1,10 @@
 ---
+stream: "research"
 title: "Building Footprint Extraction: From U-Net to RGB–Height Fusion"
 description: "From an Orange County U-Net prototype to RGB–height models, selective GlobalBuildingAtlas refinement, multi-region evaluation, and a growing US building-footprint pipeline."
 slug: "building-footprint-extraction"
 date: 2025-05-02 07:35:00+0000
-lastmod: 2026-09-24T16:19:00-04:00
+lastmod: 2026-10-28T01:30:00-04:00
 image: "building_footprint.png"
 categories:
   - "Deep Learning"
@@ -18,6 +19,14 @@ tags:
   - "Multi-modal Learning"
   - "Building Footprints"
 weight: 1
+---
+
+## October 2026 update
+
+The project now has a [public dataset and project page](/projects/usbf/), a [live US Buildings workspace](https://feng96.github.io/USBF_site/), and [released reproducible code](https://github.com/Feng96/USBF_src). The published six-state update contains **25,092,517 buildings**. The broader catalog also includes existing records elsewhere; national refinement is still in progress.
+
+The September 24 account below is retained as a historical research record. Its evaluation results, production counts, and statements about a pending release describe that earlier date. For current access and release context, start with the [USBF project overview](/projects/usbf/).
+
 ---
 
 *Updated September 24, 2026. This article expands the original “Building Footprint Extraction with U-Net” post. The initial experiment and its figures are preserved below; the subsequent sections describe the project's development into the US Building Footprint (USBF) workflow.*

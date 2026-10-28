@@ -1,4 +1,5 @@
 ---
+stream: "life"
 title: Hello
 description: Welcome to my personal website
 slug: Welcome

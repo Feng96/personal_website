@@ -1,0 +1,24 @@
+{{ define "main" }}
+    <header class="profile-intro collection-intro">
+        <p class="profile-eyebrow">{{ .Site.Title }}</p>
+        <h1>{{ .Title }}</h1>
+        <p class="collection-description">{{ .Description }}</p>
+        <div class="profile-copy">{{ .Content }}</div>
+        <nav class="profile-links" aria-label="Article collections">
+            <a href="{{ "research-notes/" | relURL }}" {{ if eq .Params.stream "research" }}aria-current="page"{{ end }}>Research Notes</a>
+            <a href="{{ "life/" | relURL }}" {{ if eq .Params.stream "life" }}aria-current="page"{{ end }}>Life</a>
+            <a href="{{ "archives/" | relURL }}">All posts</a>
+        </nav>
+    </header>
+    {{ $posts := where .Site.RegularPages "Type" "post" }}
+    {{ $posts = where $posts "Params.hidden" "!=" true }}
+    {{ $posts = where $posts "Params.stream" .Params.stream }}
+    {{ $paginator := .Paginate $posts.ByLastmod.Reverse }}
+    <section class="article-list">
+        {{ range $paginator.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+    {{ partial "pagination.html" . }}
+    {{ partial "footer/footer" . }}
+{{ end }}

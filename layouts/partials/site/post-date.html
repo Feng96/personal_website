@@ -1,0 +1,7 @@
+{{ if not .Date.IsZero }}
+    {{ if .Lastmod.After .Date }}
+        <time class="post-date--updated" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">Updated {{ .Lastmod.Format "Jan 02, 2006" }}</time>
+    {{ else }}
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") }}</time>
+    {{ end }}
+{{ end }}

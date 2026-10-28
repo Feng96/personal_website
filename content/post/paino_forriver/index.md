@@ -1,4 +1,5 @@
 ---
+stream: "life"
 title: For River（Johnny's version）
 description: A piano performance of For River from the video game 'To the Moon'. It's my favorite piano piece.
 slug: Paino

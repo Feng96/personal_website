@@ -1,4 +1,5 @@
 ---
+stream: "research"
 title: Geospatial Datasets Websites and Download Links
 description: Share links to some useful datasets and websites
 slug: Dataset
