@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on Yinan Feng</title><link>https://yinanfeng.com/projects/</link><description>Recent content in Projects on Yinan Feng</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yinanfeng.com/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>US Building Footprint (USBF)</title><link>https://yinanfeng.com/projects/usbf/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/projects/usbf/</guid><description>&lt;img src="https://yinanfeng.com/projects/usbf/usbf-boundaries.png" alt="Featured image of post US Building Footprint (USBF)" />&lt;p>&lt;a class="link" href="https://feng96.github.io/USBF_site/" target="_blank" rel="noopener"
+>Explore the map&lt;/a> · &lt;a class="link" href="https://source.coop/opengeos/us-buildings" target="_blank" rel="noopener"
+>Download data&lt;/a> · &lt;a class="link" href="https://github.com/Feng96/USBF_src" target="_blank" rel="noopener"
+>Reproducible code&lt;/a> · &lt;a class="link" href="https://feng96.github.io/research-daily/" target="_blank" rel="noopener"
+>Research Daily&lt;/a>&lt;/p>
+&lt;p>I develop &lt;strong>USBF&lt;/strong>, a building-footprint dataset and processing workflow that brings together aerial imagery, elevation, and existing building inventories. The goal is to make local geometry changes inspectable while preserving useful information from the source data.&lt;/p>
+&lt;h2 id="published-data">Published data&lt;/h2>
+&lt;p>The completed six-state update covers &lt;strong>Alabama, Arizona, Arkansas, California, Colorado, and Connecticut&lt;/strong>. It contains &lt;strong>25,092,517 buildings&lt;/strong>, including &lt;strong>913,169 with recorded geometry modifications&lt;/strong>. A recorded modification describes an action; it does not by itself establish improved accuracy.&lt;/p>
+&lt;p>The broader public catalog contained &lt;strong>150,261,726 records in 3,522 files&lt;/strong> in the October 27, 2026 publication snapshot. It combines the updated six-state product with existing GBA-based records elsewhere. Those catalog totals do not mean that every building has undergone the new refinement workflow. Regional production is continuing.&lt;/p>
+&lt;p>Downloads use GeoParquet and retain building identifiers, original and final geometry, edit provenance, source attributes, and coverage information. Published heights are &lt;strong>inherited GBA attributes&lt;/strong>; this workflow does not estimate new heights. Missing height values remain missing.&lt;/p>
+&lt;p>&lt;a class="link" href="https://source.coop/opengeos/us-buildings" target="_blank" rel="noopener"
+>Source Cooperative dataset&lt;/a> · &lt;a class="link" href="https://data.source.coop/opengeos/us-buildings/USBF_v1/manifest.json" target="_blank" rel="noopener"
+>Current publication manifest&lt;/a>&lt;/p>
+&lt;h2 id="how-the-workflow-works">How the workflow works&lt;/h2>
+&lt;p>RGB–height segmentation models propose local changes to existing GlobalBuildingAtlas footprints. Image boundaries, model evidence, elevation availability, and neighbor constraints help determine whether a proposed change is accepted. Keeping the source geometry alongside the result makes changes traceable.&lt;/p>
+&lt;p>The released minimal workflow includes frozen B0/B1 checkpoints, real example inputs, checksummed downloads, local inference, and paired geometry evaluation. The verified small example and fixed-geometry evaluation replay have different scopes from complete national regeneration or historical model retraining.&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Feng96/USBF_src" target="_blank" rel="noopener"
+>Source and releases&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/p/building-footprint-extraction/" >Earlier methods and experiment notes&lt;/a>&lt;/p>
+&lt;h2 id="us-buildings-use-the-data-in-a-browser">US Buildings: use the data in a browser&lt;/h2>
+&lt;p>I designed and built &lt;a class="link" href="https://feng96.github.io/USBF_site/" target="_blank" rel="noopener"
+>US Buildings&lt;/a>, a browser GIS that connects to the current USBF publication. It supports footprint and attribute inspection, comparison sources, available-height LoD1 display, source-data export, and experimental roof-model browsing. Recent workspace tools add local and URL imports, scoped statistics and spatial analysis, drawing, coordinate conversion, and map export.&lt;/p>
+&lt;p>The viewer loads bounded neighborhoods for interactive use. Statistics describe the loaded source records and the chosen analysis scope. Experimental LoD2 models remain a small research collection.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/images/us-buildings-workspace.png"
+loading="lazy"
+alt="US Buildings browser workspace"
+>&lt;/p>
+&lt;p>&lt;em>Earlier workspace view with the GBA footprints and heights comparison layer.&lt;/em>&lt;/p>
+&lt;h2 id="research-context">Research context&lt;/h2>
+&lt;p>My broader work investigates how imagery, elevation, and geometry can support a useful building inventory, and how footprint choices affect downstream applications such as building energy modeling. Current roof-reconstruction experiments extend this direction toward LoD2 geometry and require further independent validation.&lt;/p>
+&lt;p>&lt;a class="link" href="https://feng96.github.io/research-daily/lod2/" target="_blank" rel="noopener"
+>Roof experiments&lt;/a> · &lt;a class="link" href="https://feng96.github.io/research-daily/" target="_blank" rel="noopener"
+>Dated research records&lt;/a>&lt;/p>
+&lt;p>Dataset counts above are a dated snapshot. Use the live manifest for current inventory totals, and consult the dataset&amp;rsquo;s component-specific attribution and license terms when reusing data.&lt;/p></description></item></channel></rss>

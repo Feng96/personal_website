@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Yinan Feng</title><link>https://yinanfeng.com/page/</link><description>Recent content in Pages on Yinan Feng</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yinanfeng.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>CV &amp; Resume</title><link>https://yinanfeng.com/cv/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/cv/</guid><description>&lt;p>&lt;a class="link" href="https://yinanfeng.com/files/Yinan_Feng_CV_2026.pdf" >Download CV (PDF)&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/files/Yinan_Feng_Resume_2026.pdf" >Download one-page resume (PDF)&lt;/a>&lt;/p>
+&lt;p>Updated October 2026. The PDF CV retains its original two-page layout.&lt;/p>
+&lt;h1 id="education">Education&lt;/h1>
+&lt;h3 id="phd">Ph.D&lt;/h3>
+&lt;p>&lt;strong>University of Tennessee, Knoxville&lt;/strong>&lt;br>
+&lt;em>School of Art and Science&lt;/em>&lt;br>
+01/2023 - NOW&lt;br>
+&lt;strong>Major:&lt;/strong> Geography&lt;br>
+&lt;strong>Advisor:&lt;/strong> Dr. Qiusheng Wu\&lt;/p>
+&lt;hr>
+&lt;h3 id="master-of-science">Master of Science&lt;/h3>
+&lt;p>&lt;strong>Ohio State University&lt;/strong>&lt;br>
+&lt;em>School of Environmental and Natural Resources&lt;/em>&lt;br>
+09/2018 - 12/2020&lt;br>
+&lt;strong>Major:&lt;/strong> Environmental Science&lt;br>
+&lt;strong>Committee Members:&lt;/strong> Dr. Kaiguang Zhao (Advisor), Dr. Gil Bohrer, Dr. Desheng Liu\&lt;/p>
+&lt;hr>
+&lt;h3 id="bachelor-of-science">Bachelor of Science&lt;/h3>
+&lt;p>&lt;strong>Liaoning University of Technology&lt;/strong>&lt;br>
+&lt;em>School of Chemical &amp;amp; Environmental Engineering&lt;/em>&lt;br>
+09/2014 - 06/2018&lt;br>
+&lt;strong>Major:&lt;/strong> Environmental Science\&lt;/p>
+&lt;hr>
+&lt;h1 id="research--intern">Research &amp;amp; Intern&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>US Building Footprint (USBF) — Data and research&lt;/strong>&lt;br>
+University of Tennessee, Knoxville&lt;br>
+Developed a workflow for selective building-footprint refinement using aerial imagery, elevation, and existing inventories. Published a six-state update containing 25.1 million buildings, with original geometry, source heights, and edit provenance retained.&lt;br>
+&lt;a class="link" href="https://source.coop/opengeos/us-buildings" target="_blank" rel="noopener"
+>Dataset&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/projects/usbf/" >Project&lt;/a> · &lt;a class="link" href="https://github.com/Feng96/USBF_src" target="_blank" rel="noopener"
+>Code&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>US Buildings — Interactive geospatial website&lt;/strong>&lt;br>
+Designed and built a browser workspace for building-footprint and height exploration, dataset comparison, available-height LoD1 display, and data export. Connected it to the live USBF publication and added tools for local imports, scoped analysis, and map export.&lt;br>
+&lt;a class="link" href="https://feng96.github.io/USBF_site/" target="_blank" rel="noopener"
+>Open website&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Intern at Oak Ridge National Laboratory (ORNL)&lt;/strong>&lt;br>
+&lt;em>May 2025 – Aug 2025&lt;/em>&lt;br>
+At the NBEM Group, Oak Ridge National Laboratory\&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Integrated and standardized multiple building footprint datasets into the AutoBEM (Automatic Building Energy Modeling) input format. Analyzed how variations in building footprints affect energy simulation results at both the city and individual building levels. Found that electricity consumption correlates strongly with footprint area, while natural gas consumption is more sensitive to footprint complexity and building type.\&lt;/li>
+&lt;li>Conducted statistical analysis and visualization of energy simulation outputs, producing insights on the downstream impacts of remote sensing–derived building data. This work contributes directly to my PhD dissertation and will result in a manuscript prepared for journal submission.\&lt;/li>
+&lt;li>Collaborated with interdisciplinary researchers and project group members, enhancing skills in geospatial analysis, high-performance computing, and applied energy modeling.\&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Intern at Key Laboratory of Regional Sustainable Development&lt;/strong>&lt;br>
+&lt;em>Jan 2021 - Dec 2022&lt;/em>&lt;br>
+At the Institute of Geoscience and Natural Resource Research, Chinese Academy of Sciences\&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>By using GRACE satellite data and MODIS satellite data, we observe the contradiction between agricultural development and water resources under the new patterns of China’s grain production. Satellite data observe that the center of grains production in China is shifting to the northwest, while the water resource is changing in the opposite direction. The contrast between the two may cause an accelerated depletion of agricultural production potential in the already water-scarce north. The project is funded by the National Natural Science Foundation of China: 4217011493. I completed the data download, pre-processing, analysis, plotting, visualization and article writing for the project. The Manuscript is submitted to Remote Sensing and is still under peer review.&lt;/li>
+&lt;li>Using MODIS fire product to map the temporal and spatial distribution of crop residue burning events in Northeast China (NEC). Providing helpful information at the county level for decision maker to evaluate the effectiveness of staw burning bans policy in NEC.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Mapping fine-scale human disturbances in a working landscape with Landsat time series on Google Earth Engine&lt;/strong>&lt;br>
+&lt;em>2020-2021&lt;/em>&lt;br>
+At the Ohio State University\&lt;/p>
+&lt;blockquote>
+&lt;p>We explored the possibility of a Bayesian estimator of abrupt changes, seasonality and trends (BEAST) to capture small-scale disturbances of human activity in a catchment in Ohio as our study area. We found the algorithm can successfully capture the patterns and timings of small-scale disturbances that not captured in the annual land cover maps from Cropland Data Layers—one of the most widely used classification based land dynamics products in the US. I&amp;rsquo;m responsible for the data pre-processing and visualization, part of the writing. Published at ISPRS Journal of Photogrammetry and Remote Sensing. DOI: &lt;a class="link" href="https://doi.org/10.1016/j.isprsjprs.2021.04.008" target="_blank" rel="noopener"
+>https://doi.org/10.1016/j.isprsjprs.2021.04.008&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Case Study: how the temperature affects the evaporation process in Tokopah Valley, Nevada&lt;/strong>&lt;br>
+&lt;em>April 2019&lt;/em>&lt;br>
+The final project of GEOG 5226 Land Surface Hydrology at OSU\&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Tokopah valley is famous for the Tokopah Waterfall. According to some researches, the flow of this waterfall is highly depended on the rainfall and snowfall. I applied &amp;lsquo;Modular Distributed Watershed Educational Toolbox&amp;rsquo; (MOD-WET) to build a watershed model and simulate the surface hydrology conditions here
+ - According to the model, the monthly average discharge reaches its highest value in May. the maximum values of monthly average baseflow appeared from April to May. For visitors at Tokopah Valley, maybe spring is the best season for enjoying a trip there. Visitors may find a gushing waterfall in Tokopah Valley.&lt;/li>
+&lt;li>According to the report of UCLA, By the end of this century under our current greenhouse gas pathway, temperatures across the Sierra rise by as much as 10 degrees Fahrenheit ( Climate Change in the Sierra Nevada &lt;a class="link" href="https://www.ioes.ucla.edu/project/climate-change-sierra-nevada/%29" target="_blank" rel="noopener"
+>https://www.ioes.ucla.edu/project/climate-change-sierra-nevada/)&lt;/a>. According to my simulation, the discharge at the outlet will decrease to 0.3967 from 0.5158 m&lt;sup>3&lt;/sup>/h. However, the maximum value is 16.4273 which is higher than before.  The base flow also declined to 1.8480 × 10&lt;sup>-7&lt;/sup> m/h.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>The use of high-resolution remote sensing for plague surveillance in Kazakhstan&lt;/strong>&lt;br>
+&lt;em>April 2019&lt;/em>&lt;br>
+The final project of 5225 Introduction to Remote Sensing at OSU\&lt;/p>
+&lt;blockquote>
+&lt;p>Bubonic plague, caused by Yersinia pestis, is usually spread by fleas. In Kazakhstan, Great Gerbil is a common carrier of fleas. Great Gerbil establishes a star-like pattern of burrow systems. Such systems strongly reflect the sunlight and are visible on satellite images. Each bright disc represents a burrow system 10-40 m in diameter. We used high-resolution satellite images to estimate the range and number of Great Gerbil to provide more information to surveil the spread of the plague in Kazakhstan.&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Study of a correction method based on linear regression algorithm for PM2.5 sensors&lt;/strong>&lt;br>
+&lt;em>Jan 2018&lt;/em>&lt;br>
+At the Institute of Automation, Chinese Academy of Science\&lt;/p>
+&lt;blockquote>
+&lt;p>Inventing a method for correcting PM 2.5 sensors based on linear regression algorithm. Based on accurate data received from PM 2.5 monitoring station near the proximity of the PM 2.5 sensor, the method uses linear regression algorithm to correct the PM 2.5 output value of the sensor, making the output value of the sensor consistent with the accurate value of PM 2.5 from the monitoring station, and therefore achieving the purpose of making the PM 2.5 sensor more accurate and reliable. Published at Australia International Patent, Publication Number:2018100221&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="publications">Publications&lt;/h1>
+&lt;p>&lt;strong>Hydrogen logistics network design for hydrogen fuel cell electric long-haul trucks&lt;/strong>&lt;br>
+Rui Zhou, Frank Colin Moser, &lt;strong>Yinan Feng&lt;/strong>, Mingzhou Jin, Bo Zou&lt;br>
+&lt;em>International Journal of Hydrogen Energy&lt;/em>, 215, 153889 (2026).&lt;br>
+&lt;a class="link" href="https://doi.org/10.1016/j.ijhydene.2026.153889" target="_blank" rel="noopener"
+>DOI: 10.1016/j.ijhydene.2026.153889&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://yinanfeng.com/publications/" >All publications&lt;/a>&lt;/p></description></item><item><title>Publications</title><link>https://yinanfeng.com/publications/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/publications/</guid><description>&lt;p>&lt;a class="link" href="https://scholar.google.com/citations?user=pFWcxfcAAAAJ&amp;amp;hl=en" target="_blank" rel="noopener"
+>Google Scholar&lt;/a>&lt;/p>
+&lt;h1 id="journals">Journals&lt;/h1>
+&lt;h2 id="2026">2026&lt;/h2>
+&lt;p>&lt;strong>Hydrogen logistics network design for hydrogen fuel cell electric long-haul trucks&lt;/strong>&lt;br>
+Rui Zhou, Frank Colin Moser, &lt;strong>Yinan Feng&lt;/strong>, Mingzhou Jin, Bo Zou&lt;br>
+&lt;em>International Journal of Hydrogen Energy&lt;/em>, 215, 153889.&lt;br>
+&lt;a class="link" href="https://doi.org/10.1016/j.ijhydene.2026.153889" target="_blank" rel="noopener"
+>DOI: 10.1016/j.ijhydene.2026.153889&lt;/a>&lt;/p>
+&lt;h2 id="2022">2022&lt;/h2>
+&lt;p>&lt;strong>Detecting the spatial mismatch of water resources and grain planting pattern changes in China based on satellite data&lt;/strong>&lt;br>
+&lt;strong>Yinan Feng&lt;/strong>, Jieyong Wang&lt;br>
+&lt;em>Frontiers in Environmental Science&lt;/em>, 10, 904779.&lt;br>
+&lt;a class="link" href="https://doi.org/10.3389/fenvs.2022.904779" target="_blank" rel="noopener"
+>DOI: 10.3389/fenvs.2022.904779&lt;/a>&lt;/p>
+&lt;h2 id="2021">2021&lt;/h2>
+&lt;p>&lt;strong>Mapping fine-scale human disturbances in a working landscape with Landsat time series on Google Earth Engine&lt;/strong>&lt;br>
+Tongxi Hu, Elizabeth Myers Toman, Gang Chen, Gang Shao, Yuyu Zhou, Yang Li, Kaiguang Zhao, &lt;strong>Yinan Feng&lt;/strong>&lt;br>
+&lt;em>ISPRS Journal of Photogrammetry and Remote Sensing&lt;/em>, 176, 250–261.&lt;br>
+&lt;a class="link" href="https://doi.org/10.1016/j.isprsjprs.2021.04.008" target="_blank" rel="noopener"
+>DOI: 10.1016/j.isprsjprs.2021.04.008&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h1 id="data--software">Data &amp;amp; software&lt;/h1>
+&lt;p>&lt;strong>US Building Footprint (USBF)&lt;/strong> — Open building-footprint data with source attributes and geometry provenance. The published six-state update contains 25.1 million buildings.&lt;br>
+&lt;a class="link" href="https://source.coop/opengeos/us-buildings" target="_blank" rel="noopener"
+>Dataset&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/projects/usbf/" >Project overview&lt;/a> · &lt;a class="link" href="https://github.com/Feng96/USBF_src" target="_blank" rel="noopener"
+>Reproducible workflow&lt;/a>&lt;/p>
+&lt;p>&lt;strong>US Buildings&lt;/strong> — Browser GIS for footprint and height exploration, comparison datasets, local imports, and map/data export.&lt;br>
+&lt;a class="link" href="https://feng96.github.io/USBF_site/" target="_blank" rel="noopener"
+>Website&lt;/a> · &lt;a class="link" href="https://github.com/Feng96/USBF_site" target="_blank" rel="noopener"
+>Source&lt;/a>&lt;/p>
+&lt;p>&lt;strong>rasterarea&lt;/strong> — A Python package for geospatial visualization.&lt;br>
+&lt;a class="link" href="https://yinanfeng.com/p/rasterarea-a-python-package/" >Project notes&lt;/a>&lt;/p>
+&lt;h1 id="apps">Apps&lt;/h1>
+&lt;p>&lt;strong>Wearing a Mask and keeping social distance!&lt;/strong>&lt;br>
+I used R Shiny to design an app that downloads data from the Johns Hopkins CSSE group (&lt;a class="link" href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener"
+>source&lt;/a>), showing the last 7 days of new COVID-19 cases by state, as well as executive orders from the local government.&lt;/p>
+&lt;p>&lt;a class="link" href="https://feng945.shinyapps.io/stat5730/" target="_blank" rel="noopener"
+>link to the app&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h1 id="patents">Patents&lt;/h1>
+&lt;p>&lt;strong>A correction method based on linear regression algorithm for PM2.5 sensors&lt;/strong>&lt;br>
+Published at Australia International Patent&lt;br>
+Publication Number: 2018100221&lt;/p></description></item><item><title>Research</title><link>https://yinanfeng.com/research/</link><pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/research/</guid><description>&lt;p>I use &lt;strong>remote sensing, GeoAI, and geospatial analysis&lt;/strong> to study the built environment and environmental change. My current work connects building footprints, elevation, and aerial imagery with open data and interactive tools.&lt;/p>
+&lt;h2 id="building-footprints-and-open-data">Building footprints and open data&lt;/h2>
+&lt;p>&lt;strong>US Building Footprint (USBF)&lt;/strong> is my main research project. I develop methods for selective refinement of GlobalBuildingAtlas outlines using aerial imagery, signed elevation, and model evidence. The published six-state update contains &lt;strong>25.1 million buildings&lt;/strong>, retaining original geometry, source heights, stable identifiers, and edit provenance.&lt;/p>
+&lt;p>&lt;img src="https://yinanfeng.com/images/usbf-boundaries.png"
+loading="lazy"
+alt="Aerial imagery and building-boundary comparisons"
+>&lt;/p>
+&lt;p>&lt;em>Local boundary proposals from the September 2026 research version; the methods post reports the corresponding evaluation.&lt;/em>&lt;/p>
+&lt;p>&lt;a class="link" href="https://yinanfeng.com/projects/usbf/" >Project overview&lt;/a> · &lt;a class="link" href="https://source.coop/opengeos/us-buildings" target="_blank" rel="noopener"
+>Dataset&lt;/a> · &lt;a class="link" href="https://github.com/Feng96/USBF_src" target="_blank" rel="noopener"
+>Code&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/p/building-footprint-extraction/" >Methods and experiments&lt;/a>&lt;/p>
+&lt;h2 id="geospatial-tools-us-buildings">Geospatial tools: US Buildings&lt;/h2>
+&lt;p>I designed and built &lt;strong>US Buildings&lt;/strong>, a browser workspace for exploring USBF and comparison inventories. It brings together footprint inspection, available-height 3D display, local data import, scoped analysis, and map and data export.&lt;/p>
+&lt;p>&lt;a class="link" href="https://feng96.github.io/USBF_site/" target="_blank" rel="noopener"
+>Open US Buildings&lt;/a> · &lt;a class="link" href="https://github.com/Feng96/USBF_site" target="_blank" rel="noopener"
+>Website source&lt;/a>&lt;/p>
+&lt;h2 id="from-footprints-to-lod2-roof-geometry">From footprints to LoD2 roof geometry&lt;/h2>
+&lt;p>I am exploring roof reconstruction using NAIP imagery and 3DEP LiDAR. Recent experiments examine canopy contamination, roof-support preservation, and local geometric correction. These are small-scale research results; independent roof-geometry evaluation remains an important next step.&lt;/p>
+&lt;p>&lt;a class="link" href="https://feng96.github.io/research-daily/lod2/" target="_blank" rel="noopener"
+>Interactive experiments&lt;/a> · &lt;a class="link" href="https://feng96.github.io/research-daily/lod2/paper/" target="_blank" rel="noopener"
+>Method comparison&lt;/a>&lt;/p>
+&lt;h2 id="building-geometry-and-energy-modeling">Building geometry and energy modeling&lt;/h2>
+&lt;p>During my work with the National Building Energy Model team at Oak Ridge National Laboratory, I integrated and standardized building-footprint datasets for AutoBEM and investigated how footprint area and geometry affect simulated energy use. This connects the quality of remote sensing products to their downstream use.&lt;/p>
+&lt;h2 id="environmental-remote-sensing">Environmental remote sensing&lt;/h2>
+&lt;p>Earlier work used GRACE and MODIS observations to examine the spatial mismatch between water resources and grain-planting changes in China, and Landsat time series to study fine-scale human disturbance. These projects continue to shape my interest in connecting spatial data to environmental questions.&lt;/p>
+&lt;p>&lt;a class="link" href="https://yinanfeng.com/publications/" >Publications&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/cv/" >CV and resume&lt;/a> · &lt;a class="link" href="https://feng96.github.io/research-daily/" target="_blank" rel="noopener"
+>Research Daily&lt;/a>&lt;/p></description></item><item><title>Posts</title><link>https://yinanfeng.com/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/archives/</guid><description/></item><item><title>About me</title><link>https://yinanfeng.com/about-me/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/about-me/</guid><description>&lt;p>I&amp;rsquo;m &lt;strong>Yinan Feng&lt;/strong>, a PhD candidate in Geography at the University of Tennessee, Knoxville, advised by Dr. Qiusheng Wu. I work on remote sensing, GeoAI, building inventories, and tools that make geospatial research easier to explore.&lt;/p>
+&lt;p>I grew up in Nanyang, China. Nature documentaries first sparked my interest in environmental questions. I studied Environmental Science at Liaoning University of Technology and earned my master&amp;rsquo;s degree at Ohio State University, working with Dr. Kaiguang Zhao. Research at the Chinese Academy of Sciences introduced me to agricultural remote sensing and the relationships between water resources and food production.&lt;/p>
+&lt;p>My current projects connect aerial imagery, building footprints, and elevation. Alongside the research, I enjoy creating open datasets and software—including &lt;a class="link" href="https://yinanfeng.com/projects/usbf/" >USBF&lt;/a> and the &lt;a class="link" href="https://feng96.github.io/USBF_site/" target="_blank" rel="noopener"
+>US Buildings workspace&lt;/a>.&lt;/p>
+&lt;p>Outside research, I enjoy cooking, learning piano, skiing, street dance, and Big Band jazz. This website keeps a little space for those parts of life, too.&lt;/p>
+&lt;p>&lt;a class="link" href="https://yinanfeng.com/research/" >Research&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/cv/" >CV and resume&lt;/a> · &lt;a class="link" href="https://scholar.google.com/citations?user=pFWcxfcAAAAJ&amp;amp;hl=en" target="_blank" rel="noopener"
+>Google Scholar&lt;/a> · &lt;a class="link" href="https://yinanfeng.com/life/" >Life&lt;/a>&lt;/p></description></item><item><title>Contact</title><link>https://yinanfeng.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yinanfeng.com/contact/</guid><description>&lt;h2 id="email">Email&lt;/h2>
+&lt;p>&lt;a class="link" href="mailto:yfeng21@vols.utk.edu" >yfeng21@vols.utk.edu&lt;/a>&lt;/p>
+&lt;p>University of Tennessee, Knoxville&lt;/p></description></item></channel></rss>
